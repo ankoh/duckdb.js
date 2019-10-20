@@ -2,10 +2,10 @@
 
 PROJECT_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )/../"
 
-LIB_SOURCE_DIR="${PROJECT_ROOT}/lib"
-LIB_BUILD_DIR="${PROJECT_ROOT}/lib/build/emscripten"
-APP_SOURCE_DIR="${PROJECT_ROOT}/app"
-APP_LIB_DIR="${APP_SOURCE_DIR}/public/lib"
+DUCKDB_WEB_SOURCE_DIR="${PROJECT_ROOT}/duckdb_web"
+DUCKDB_WEB_BUILD_DIR="${PROJECT_ROOT}/duckdb_web/build/emscripten"
+DEMO_SOURCE_DIR="${PROJECT_ROOT}/demo"
+DEMO_PUBLIC_DIR="${DEMO_SOURCE_DIR}/public/lib"
 
 [ ! -z "${EMSDK}" ] \
     && { echo "[ OK  ] Test environment: EMSDK"; } \
@@ -21,10 +21,10 @@ APP_LIB_DIR="${APP_SOURCE_DIR}/public/lib"
     && { echo "[ OK  ] Test command: emmake"; } \
     || { echo "[ ERR ] Test command: emmake"; exit 1; }
 
-mkdir -p ${LIB_BUILD_DIR}
-cd ${LIB_BUILD_DIR}
+mkdir -p ${DUCKDB_WEB_BUILD_DIR}
+cd ${DUCKDB_WEB_BUILD_DIR}
 
-emconfigure cmake -DCMAKE_BUILD_TYPE=Release ${LIB_SOURCE_DIR} \
+emconfigure cmake -DCMAKE_BUILD_TYPE=Release ${DUCKDB_WEB_SOURCE_DIR} \
     && { echo "[ OK  ] Build configuration"; } \
     || { echo "[ ERR ] Build configuration"; exit 1; }
 
@@ -32,7 +32,7 @@ emmake make -j$(nproc) duckdb_web \
     && { echo "[ OK  ] Build project"; } \
     || { echo "[ ERR ] Build project"; exit 1; }
 
-mkdir -p ${APP_LIB_DIR}
-cp ${LIB_BUILD_DIR}/duckdb_web.{wasm,js} ${APP_LIB_DIR}
+mkdir -p ${DEMO_PUBLIC_DIR}
+cp ${DUCKDB_WEB_BUILD_DIR}/duckdb_web.{wasm,js} ${DEMO_PUBLIC_DIR}
 
-cd ${LIB_SOURCE_DIR}
+cd ${DUCKDB_WEB_SOURCE_DIR}

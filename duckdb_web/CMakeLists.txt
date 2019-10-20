@@ -13,16 +13,19 @@ include("${CMAKE_SOURCE_DIR}/cmake/clang-tidy.cmake")
 include("${CMAKE_SOURCE_DIR}/modules/duckdb.cmake")
 include("${CMAKE_SOURCE_DIR}/modules/spdlog.cmake")
 include("${CMAKE_SOURCE_DIR}/modules/googletest.cmake")
+include("${CMAKE_SOURCE_DIR}/modules/flatbuffers.cmake")
 
 # ---------------------------------------------------------------------------
 # Library
 
-include_directories("${CMAKE_SOURCE_DIR}/include")
+include_directories(
+    "${CMAKE_SOURCE_DIR}/include"
+)
 
 add_library(duckdb_api
     ${CMAKE_SOURCE_DIR}/src/api.cpp
 )
-target_link_libraries(duckdb_api duckdb spdlog)
+target_link_libraries(duckdb_api duckdb spdlog flatbuffers)
 
 # ---------------------------------------------------------------------------
 # JS Binary
@@ -38,6 +41,7 @@ if(DEFINED ENV{EMSDK})
         -s EXPORT_NAME=DuckDB \
         -s EXPORTED_FUNCTIONS='[\
             _main, \
+            _foo, \
             _duckdb_open, \
             _duckdb_close, \
             _duckdb_disconnect, \

@@ -1,0 +1,47 @@
+namespace duckdb.proto;
+
+enum DuckDBType: uint8 {
+    DUCKDB_TYPE_INVALID = 0,
+    DUCKDB_TYPE_BOOLEAN = 1,
+    DUCKDB_TYPE_TINYINT = 2,
+    DUCKDB_TYPE_SMALLINT = 3,
+    DUCKDB_TYPE_INTEGER = 4,
+    DUCKDB_TYPE_BIGINT = 5,
+    DUCKDB_TYPE_FLOAT = 6,
+    DUCKDB_TYPE_DOUBLE = 7,
+    DUCKDB_TYPE_TIMESTAMP = 8,
+    DUCKDB_TYPE_DATE = 9,
+    DUCKDB_TYPE_TIME = 10,
+    DUCKDB_TYPE_VARCHAR = 11
+}
+
+struct DuckDBDate {
+    year: int32;
+    month: int8;
+    day: int8;
+}
+
+struct DuckDBTime {
+    hour: int8;
+    min: int8;
+    sec: int8;
+    msec: int16;
+}
+
+struct DuckDBTimestamp {
+    date: DuckDBDate;
+    time: DuckDBTime;
+}
+
+table DuckDBColumn {
+    data: [ubyte];
+    nullmask: [bool];
+    type: DuckDBType;
+    name: string;
+}
+
+table DuckDBResult {
+    columns: [DuckDBColumn];
+    rows: uint32;
+    error_message: string;
+}
