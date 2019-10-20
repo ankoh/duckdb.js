@@ -1,12 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Demo from './Demo';
+import { DuckDBAPI } from './DuckDB';
+import { Terminal } from './Terminal';
+import { AppContextProvider, IAppContext } from './AppContext';
+
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import './fonts/fonts.css';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const terminal = new Terminal();
+const duckdb = new DuckDBAPI();
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+duckdb.init();
+
+const appContext: IAppContext = {
+    duckdb: duckdb,
+    terminal: terminal,
+};
+
+ReactDOM.render(
+    <AppContextProvider value={appContext}>
+        <Demo />
+    </AppContextProvider>,
+    document.getElementById('root') as HTMLElement
+);

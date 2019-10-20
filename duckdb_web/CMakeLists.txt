@@ -41,20 +41,11 @@ if(DEFINED ENV{EMSDK})
         -s EXPORT_NAME=DuckDB \
         -s EXPORTED_FUNCTIONS='[\
             _main, \
-            _foo, \
-            _duckdb_open, \
-            _duckdb_close, \
-            _duckdb_disconnect, \
-            _duckdb_query, \
-            _duckdb_destroy_result, \
-            _duckdb_value_boolean, \
-            _duckdb_value_int8, \
-            _duckdb_value_int16, \
-            _duckdb_value_int32, \
-            _duckdb_value_int64, \
-            _duckdb_value_float, \
-            _duckdb_value_double, \
-            _duckdb_value_varchar \
+            _duckdb_web_connect, \
+            _duckdb_web_disconnect, \
+            _duckdb_web_query, \
+            _duckdb_web_destroy_result, \
+            _duckdb_web_get_result_size \
         ]' \
         -s EXTRA_EXPORTED_RUNTIME_METHODS='[\"ccall\", \"cwrap\"]' \
     ")

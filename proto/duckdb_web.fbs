@@ -1,4 +1,4 @@
-namespace duckdb.proto;
+namespace duckdb_web.proto;
 
 enum DuckDBType: uint8 {
     DUCKDB_TYPE_INVALID = 0,

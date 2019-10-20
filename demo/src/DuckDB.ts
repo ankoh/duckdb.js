@@ -6,9 +6,6 @@ export class DuckDBAPI {
     /// The module
     protected module: any | null = null;
 
-    constructor() {
-    }
-
     /// Initialize the DuckDB api
     public init(): Promise<void> {
         this.moduleLoading = new Promise<void>(resolve => {
@@ -34,5 +31,19 @@ export class DuckDBAPI {
         } else {
             return Promise.resolve();
         }
+    }
+
+    /// Run a query
+    public async query(text: string): Promise<void> {
+        await this.waitUntilReady();
+
+        // XXX Proof of concept
+        // We don't want to reconnect every time
+        let connection =  this.module.ccall('duckdb_web_connect', 'number', [], []);
+        let result =  this.module.ccall('duckdb_web_query', 'number', ['number', 'string'], [connection, text]);
+        this.module.ccall('duckdb_web_destroy_result', 'void', ['number'], [result]);
+        this.module.ccall('duckdb_web_disconnect', 'void', [], []);
+
+        return Promise.resolve();
     }
 } 
