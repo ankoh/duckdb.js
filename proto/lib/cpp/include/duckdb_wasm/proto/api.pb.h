@@ -54,23 +54,20 @@ struct TableStruct_api_2eproto {
 };
 namespace duckdb_wasm {
 namespace proto {
-namespace api {
 class FormattedText;
 class FormattedTextDefaultTypeInternal;
 extern FormattedTextDefaultTypeInternal _FormattedText_default_instance_;
 class RawData;
 class RawDataDefaultTypeInternal;
 extern RawDataDefaultTypeInternal _RawData_default_instance_;
-}  // namespace api
 }  // namespace proto
 }  // namespace duckdb_wasm
 PROTOBUF_NAMESPACE_OPEN
-template<> ::duckdb_wasm::proto::api::FormattedText* Arena::CreateMaybeMessage<::duckdb_wasm::proto::api::FormattedText>(Arena*);
-template<> ::duckdb_wasm::proto::api::RawData* Arena::CreateMaybeMessage<::duckdb_wasm::proto::api::RawData>(Arena*);
+template<> ::duckdb_wasm::proto::FormattedText* Arena::CreateMaybeMessage<::duckdb_wasm::proto::FormattedText>(Arena*);
+template<> ::duckdb_wasm::proto::RawData* Arena::CreateMaybeMessage<::duckdb_wasm::proto::RawData>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace duckdb_wasm {
 namespace proto {
-namespace api {
 
 enum StatusCode : int {
   SUCCESS = 0,
@@ -96,7 +93,7 @@ bool StatusCode_Parse(
 // ===================================================================
 
 class FormattedText PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:duckdb_wasm.proto.api.FormattedText) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:duckdb_wasm.proto.FormattedText) */ {
  public:
   inline FormattedText() : FormattedText(nullptr) {}
   virtual ~FormattedText();
@@ -176,7 +173,7 @@ class FormattedText PROTOBUF_FINAL :
   void InternalSwap(FormattedText* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "duckdb_wasm.proto.api.FormattedText";
+    return "duckdb_wasm.proto.FormattedText";
   }
   protected:
   explicit FormattedText(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -210,7 +207,7 @@ class FormattedText PROTOBUF_FINAL :
   std::string* _internal_mutable_text();
   public:
 
-  // @@protoc_insertion_point(class_scope:duckdb_wasm.proto.api.FormattedText)
+  // @@protoc_insertion_point(class_scope:duckdb_wasm.proto.FormattedText)
  private:
   class _Internal;
 
@@ -224,7 +221,7 @@ class FormattedText PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class RawData PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:duckdb_wasm.proto.api.RawData) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:duckdb_wasm.proto.RawData) */ {
  public:
   inline RawData() : RawData(nullptr) {}
   virtual ~RawData();
@@ -304,7 +301,7 @@ class RawData PROTOBUF_FINAL :
   void InternalSwap(RawData* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "duckdb_wasm.proto.api.RawData";
+    return "duckdb_wasm.proto.RawData";
   }
   protected:
   explicit RawData(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -338,7 +335,7 @@ class RawData PROTOBUF_FINAL :
   std::string* _internal_mutable_data();
   public:
 
-  // @@protoc_insertion_point(class_scope:duckdb_wasm.proto.api.RawData)
+  // @@protoc_insertion_point(class_scope:duckdb_wasm.proto.RawData)
  private:
   class _Internal;
 
@@ -365,15 +362,15 @@ inline void FormattedText::clear_text() {
   text_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& FormattedText::text() const {
-  // @@protoc_insertion_point(field_get:duckdb_wasm.proto.api.FormattedText.text)
+  // @@protoc_insertion_point(field_get:duckdb_wasm.proto.FormattedText.text)
   return _internal_text();
 }
 inline void FormattedText::set_text(const std::string& value) {
   _internal_set_text(value);
-  // @@protoc_insertion_point(field_set:duckdb_wasm.proto.api.FormattedText.text)
+  // @@protoc_insertion_point(field_set:duckdb_wasm.proto.FormattedText.text)
 }
 inline std::string* FormattedText::mutable_text() {
-  // @@protoc_insertion_point(field_mutable:duckdb_wasm.proto.api.FormattedText.text)
+  // @@protoc_insertion_point(field_mutable:duckdb_wasm.proto.FormattedText.text)
   return _internal_mutable_text();
 }
 inline const std::string& FormattedText::_internal_text() const {
@@ -387,28 +384,28 @@ inline void FormattedText::set_text(std::string&& value) {
   
   text_.SetLite(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:duckdb_wasm.proto.api.FormattedText.text)
+  // @@protoc_insertion_point(field_set_rvalue:duckdb_wasm.proto.FormattedText.text)
 }
 inline void FormattedText::set_text(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   text_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:duckdb_wasm.proto.api.FormattedText.text)
+  // @@protoc_insertion_point(field_set_char:duckdb_wasm.proto.FormattedText.text)
 }
 inline void FormattedText::set_text(const char* value,
     size_t size) {
   
   text_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:duckdb_wasm.proto.api.FormattedText.text)
+  // @@protoc_insertion_point(field_set_pointer:duckdb_wasm.proto.FormattedText.text)
 }
 inline std::string* FormattedText::_internal_mutable_text() {
   
   return text_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* FormattedText::release_text() {
-  // @@protoc_insertion_point(field_release:duckdb_wasm.proto.api.FormattedText.text)
+  // @@protoc_insertion_point(field_release:duckdb_wasm.proto.FormattedText.text)
   return text_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void FormattedText::set_allocated_text(std::string* text) {
@@ -419,7 +416,7 @@ inline void FormattedText::set_allocated_text(std::string* text) {
   }
   text_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), text,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:duckdb_wasm.proto.api.FormattedText.text)
+  // @@protoc_insertion_point(field_set_allocated:duckdb_wasm.proto.FormattedText.text)
 }
 
 // -------------------------------------------------------------------
@@ -431,15 +428,15 @@ inline void RawData::clear_data() {
   data_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& RawData::data() const {
-  // @@protoc_insertion_point(field_get:duckdb_wasm.proto.api.RawData.data)
+  // @@protoc_insertion_point(field_get:duckdb_wasm.proto.RawData.data)
   return _internal_data();
 }
 inline void RawData::set_data(const std::string& value) {
   _internal_set_data(value);
-  // @@protoc_insertion_point(field_set:duckdb_wasm.proto.api.RawData.data)
+  // @@protoc_insertion_point(field_set:duckdb_wasm.proto.RawData.data)
 }
 inline std::string* RawData::mutable_data() {
-  // @@protoc_insertion_point(field_mutable:duckdb_wasm.proto.api.RawData.data)
+  // @@protoc_insertion_point(field_mutable:duckdb_wasm.proto.RawData.data)
   return _internal_mutable_data();
 }
 inline const std::string& RawData::_internal_data() const {
@@ -453,28 +450,28 @@ inline void RawData::set_data(std::string&& value) {
   
   data_.SetLite(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:duckdb_wasm.proto.api.RawData.data)
+  // @@protoc_insertion_point(field_set_rvalue:duckdb_wasm.proto.RawData.data)
 }
 inline void RawData::set_data(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   data_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:duckdb_wasm.proto.api.RawData.data)
+  // @@protoc_insertion_point(field_set_char:duckdb_wasm.proto.RawData.data)
 }
 inline void RawData::set_data(const void* value,
     size_t size) {
   
   data_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:duckdb_wasm.proto.api.RawData.data)
+  // @@protoc_insertion_point(field_set_pointer:duckdb_wasm.proto.RawData.data)
 }
 inline std::string* RawData::_internal_mutable_data() {
   
   return data_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* RawData::release_data() {
-  // @@protoc_insertion_point(field_release:duckdb_wasm.proto.api.RawData.data)
+  // @@protoc_insertion_point(field_release:duckdb_wasm.proto.RawData.data)
   return data_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void RawData::set_allocated_data(std::string* data) {
@@ -485,7 +482,7 @@ inline void RawData::set_allocated_data(std::string* data) {
   }
   data_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), data,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:duckdb_wasm.proto.api.RawData.data)
+  // @@protoc_insertion_point(field_set_allocated:duckdb_wasm.proto.RawData.data)
 }
 
 #ifdef __GNUC__
@@ -496,13 +493,12 @@ inline void RawData::set_allocated_data(std::string* data) {
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace api
 }  // namespace proto
 }  // namespace duckdb_wasm
 
 PROTOBUF_NAMESPACE_OPEN
 
-template <> struct is_proto_enum< ::duckdb_wasm::proto::api::StatusCode> : ::std::true_type {};
+template <> struct is_proto_enum< ::duckdb_wasm::proto::StatusCode> : ::std::true_type {};
 
 PROTOBUF_NAMESPACE_CLOSE
 

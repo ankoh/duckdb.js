@@ -13,7 +13,6 @@
 #include <google/protobuf/port_def.inc>
 namespace duckdb_wasm {
 namespace proto {
-namespace api {
 class FormattedTextDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<FormattedText> _instance;
@@ -22,15 +21,14 @@ class RawDataDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<RawData> _instance;
 } _RawData_default_instance_;
-}  // namespace api
 }  // namespace proto
 }  // namespace duckdb_wasm
 static void InitDefaultsscc_info_FormattedText_api_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::duckdb_wasm::proto::api::_FormattedText_default_instance_;
-    new (ptr) ::duckdb_wasm::proto::api::FormattedText();
+    void* ptr = &::duckdb_wasm::proto::_FormattedText_default_instance_;
+    new (ptr) ::duckdb_wasm::proto::FormattedText();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
 }
@@ -42,8 +40,8 @@ static void InitDefaultsscc_info_RawData_api_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::duckdb_wasm::proto::api::_RawData_default_instance_;
-    new (ptr) ::duckdb_wasm::proto::api::RawData();
+    void* ptr = &::duckdb_wasm::proto::_RawData_default_instance_;
+    new (ptr) ::duckdb_wasm::proto::RawData();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
 }
@@ -53,7 +51,6 @@ static void InitDefaultsscc_info_RawData_api_2eproto() {
 
 namespace duckdb_wasm {
 namespace proto {
-namespace api {
 bool StatusCode_IsValid(int value) {
   switch (value) {
     case 0:
@@ -116,7 +113,7 @@ FormattedText::FormattedText(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:duckdb_wasm.proto.api.FormattedText)
+  // @@protoc_insertion_point(arena_constructor:duckdb_wasm.proto.FormattedText)
 }
 FormattedText::FormattedText(const FormattedText& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
@@ -126,7 +123,7 @@ FormattedText::FormattedText(const FormattedText& from)
     text_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_text(),
       GetArena());
   }
-  // @@protoc_insertion_point(copy_constructor:duckdb_wasm.proto.api.FormattedText)
+  // @@protoc_insertion_point(copy_constructor:duckdb_wasm.proto.FormattedText)
 }
 
 void FormattedText::SharedCtor() {
@@ -135,7 +132,7 @@ void FormattedText::SharedCtor() {
 }
 
 FormattedText::~FormattedText() {
-  // @@protoc_insertion_point(destructor:duckdb_wasm.proto.api.FormattedText)
+  // @@protoc_insertion_point(destructor:duckdb_wasm.proto.FormattedText)
   SharedDtor();
   _internal_metadata_.Delete<std::string>();
 }
@@ -161,7 +158,7 @@ const FormattedText& FormattedText::default_instance() {
 
 
 void FormattedText::Clear() {
-// @@protoc_insertion_point(message_clear_start:duckdb_wasm.proto.api.FormattedText)
+// @@protoc_insertion_point(message_clear_start:duckdb_wasm.proto.FormattedText)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -211,7 +208,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* FormattedText::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:duckdb_wasm.proto.api.FormattedText)
+  // @@protoc_insertion_point(serialize_to_array_start:duckdb_wasm.proto.FormattedText)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -220,7 +217,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_text().data(), static_cast<int>(this->_internal_text().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "duckdb_wasm.proto.api.FormattedText.text");
+      "duckdb_wasm.proto.FormattedText.text");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_text(), target);
   }
@@ -229,12 +226,12 @@ failure:
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:duckdb_wasm.proto.api.FormattedText)
+  // @@protoc_insertion_point(serialize_to_array_end:duckdb_wasm.proto.FormattedText)
   return target;
 }
 
 size_t FormattedText::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:duckdb_wasm.proto.api.FormattedText)
+// @@protoc_insertion_point(message_byte_size_start:duckdb_wasm.proto.FormattedText)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -263,7 +260,7 @@ void FormattedText::CheckTypeAndMergeFrom(
 }
 
 void FormattedText::MergeFrom(const FormattedText& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:duckdb_wasm.proto.api.FormattedText)
+// @@protoc_insertion_point(class_specific_merge_from_start:duckdb_wasm.proto.FormattedText)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -275,7 +272,7 @@ void FormattedText::MergeFrom(const FormattedText& from) {
 }
 
 void FormattedText::CopyFrom(const FormattedText& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:duckdb_wasm.proto.api.FormattedText)
+// @@protoc_insertion_point(class_specific_copy_from_start:duckdb_wasm.proto.FormattedText)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -292,7 +289,7 @@ void FormattedText::InternalSwap(FormattedText* other) {
 }
 
 std::string FormattedText::GetTypeName() const {
-  return "duckdb_wasm.proto.api.FormattedText";
+  return "duckdb_wasm.proto.FormattedText";
 }
 
 
@@ -306,7 +303,7 @@ RawData::RawData(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:duckdb_wasm.proto.api.RawData)
+  // @@protoc_insertion_point(arena_constructor:duckdb_wasm.proto.RawData)
 }
 RawData::RawData(const RawData& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
@@ -316,7 +313,7 @@ RawData::RawData(const RawData& from)
     data_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_data(),
       GetArena());
   }
-  // @@protoc_insertion_point(copy_constructor:duckdb_wasm.proto.api.RawData)
+  // @@protoc_insertion_point(copy_constructor:duckdb_wasm.proto.RawData)
 }
 
 void RawData::SharedCtor() {
@@ -325,7 +322,7 @@ void RawData::SharedCtor() {
 }
 
 RawData::~RawData() {
-  // @@protoc_insertion_point(destructor:duckdb_wasm.proto.api.RawData)
+  // @@protoc_insertion_point(destructor:duckdb_wasm.proto.RawData)
   SharedDtor();
   _internal_metadata_.Delete<std::string>();
 }
@@ -351,7 +348,7 @@ const RawData& RawData::default_instance() {
 
 
 void RawData::Clear() {
-// @@protoc_insertion_point(message_clear_start:duckdb_wasm.proto.api.RawData)
+// @@protoc_insertion_point(message_clear_start:duckdb_wasm.proto.RawData)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -400,7 +397,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* RawData::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:duckdb_wasm.proto.api.RawData)
+  // @@protoc_insertion_point(serialize_to_array_start:duckdb_wasm.proto.RawData)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -414,12 +411,12 @@ failure:
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:duckdb_wasm.proto.api.RawData)
+  // @@protoc_insertion_point(serialize_to_array_end:duckdb_wasm.proto.RawData)
   return target;
 }
 
 size_t RawData::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:duckdb_wasm.proto.api.RawData)
+// @@protoc_insertion_point(message_byte_size_start:duckdb_wasm.proto.RawData)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -448,7 +445,7 @@ void RawData::CheckTypeAndMergeFrom(
 }
 
 void RawData::MergeFrom(const RawData& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:duckdb_wasm.proto.api.RawData)
+// @@protoc_insertion_point(class_specific_merge_from_start:duckdb_wasm.proto.RawData)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -460,7 +457,7 @@ void RawData::MergeFrom(const RawData& from) {
 }
 
 void RawData::CopyFrom(const RawData& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:duckdb_wasm.proto.api.RawData)
+// @@protoc_insertion_point(class_specific_copy_from_start:duckdb_wasm.proto.RawData)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -477,20 +474,19 @@ void RawData::InternalSwap(RawData* other) {
 }
 
 std::string RawData::GetTypeName() const {
-  return "duckdb_wasm.proto.api.RawData";
+  return "duckdb_wasm.proto.RawData";
 }
 
 
 // @@protoc_insertion_point(namespace_scope)
-}  // namespace api
 }  // namespace proto
 }  // namespace duckdb_wasm
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::duckdb_wasm::proto::api::FormattedText* Arena::CreateMaybeMessage< ::duckdb_wasm::proto::api::FormattedText >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::duckdb_wasm::proto::api::FormattedText >(arena);
+template<> PROTOBUF_NOINLINE ::duckdb_wasm::proto::FormattedText* Arena::CreateMaybeMessage< ::duckdb_wasm::proto::FormattedText >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::duckdb_wasm::proto::FormattedText >(arena);
 }
-template<> PROTOBUF_NOINLINE ::duckdb_wasm::proto::api::RawData* Arena::CreateMaybeMessage< ::duckdb_wasm::proto::api::RawData >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::duckdb_wasm::proto::api::RawData >(arena);
+template<> PROTOBUF_NOINLINE ::duckdb_wasm::proto::RawData* Arena::CreateMaybeMessage< ::duckdb_wasm::proto::RawData >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::duckdb_wasm::proto::RawData >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 
