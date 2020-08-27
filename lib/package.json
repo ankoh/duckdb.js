@@ -1,0 +1,15 @@
+{
+  "name": "duckdb_wasm",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "@types/google-protobuf": "^3.7.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "google-protobuf": "^3.11.0-rc.1"
+  }
+}
