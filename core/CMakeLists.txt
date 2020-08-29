@@ -35,7 +35,7 @@ include("${CMAKE_SOURCE_DIR}/cmake/clang-tidy.cmake")
 include("${CMAKE_SOURCE_DIR}/cmake/duckdb.cmake")
 include("${CMAKE_SOURCE_DIR}/cmake/protobuf.cmake")
 include("${CMAKE_SOURCE_DIR}/cmake/googletest.cmake")
-
+include("${CMAKE_SOURCE_DIR}/cmake/spdlog.cmake")
 
 # ---------------------------------------------------------------------------
 # Proto project
@@ -65,6 +65,7 @@ add_library(duckdb_wasm_core
 target_link_libraries(duckdb_wasm_core
     duckdb_wasm_proto
     protobuf
+    spdlog
     Threads::Threads
 )
 
