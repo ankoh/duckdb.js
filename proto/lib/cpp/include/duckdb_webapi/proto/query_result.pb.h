@@ -52,7 +52,7 @@ struct TableStruct_query_5fresult_2eproto {
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
   static const ::PROTOBUF_NAMESPACE_ID::uint32 offsets[];
 };
-namespace duckdb_wasm {
+namespace duckdb_webapi {
 namespace proto {
 class QueryResultChunk;
 class QueryResultChunkDefaultTypeInternal;
@@ -64,19 +64,19 @@ class QueryResultHeader;
 class QueryResultHeaderDefaultTypeInternal;
 extern QueryResultHeaderDefaultTypeInternal _QueryResultHeader_default_instance_;
 }  // namespace proto
-}  // namespace duckdb_wasm
+}  // namespace duckdb_webapi
 PROTOBUF_NAMESPACE_OPEN
-template<> ::duckdb_wasm::proto::QueryResultChunk* Arena::CreateMaybeMessage<::duckdb_wasm::proto::QueryResultChunk>(Arena*);
-template<> ::duckdb_wasm::proto::QueryResultColumn* Arena::CreateMaybeMessage<::duckdb_wasm::proto::QueryResultColumn>(Arena*);
-template<> ::duckdb_wasm::proto::QueryResultHeader* Arena::CreateMaybeMessage<::duckdb_wasm::proto::QueryResultHeader>(Arena*);
+template<> ::duckdb_webapi::proto::QueryResultChunk* Arena::CreateMaybeMessage<::duckdb_webapi::proto::QueryResultChunk>(Arena*);
+template<> ::duckdb_webapi::proto::QueryResultColumn* Arena::CreateMaybeMessage<::duckdb_webapi::proto::QueryResultColumn>(Arena*);
+template<> ::duckdb_webapi::proto::QueryResultHeader* Arena::CreateMaybeMessage<::duckdb_webapi::proto::QueryResultHeader>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
-namespace duckdb_wasm {
+namespace duckdb_webapi {
 namespace proto {
 
 // ===================================================================
 
 class QueryResultColumn PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:duckdb_wasm.proto.QueryResultColumn) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:duckdb_webapi.proto.QueryResultColumn) */ {
  public:
   inline QueryResultColumn() : QueryResultColumn(nullptr) {}
   virtual ~QueryResultColumn();
@@ -156,7 +156,7 @@ class QueryResultColumn PROTOBUF_FINAL :
   void InternalSwap(QueryResultColumn* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "duckdb_wasm.proto.QueryResultColumn";
+    return "duckdb_webapi.proto.QueryResultColumn";
   }
   protected:
   explicit QueryResultColumn(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -382,7 +382,7 @@ class QueryResultColumn PROTOBUF_FINAL :
   std::string* _internal_add_rows_str();
   public:
 
-  // @@protoc_insertion_point(class_scope:duckdb_wasm.proto.QueryResultColumn)
+  // @@protoc_insertion_point(class_scope:duckdb_webapi.proto.QueryResultColumn)
  private:
   class _Internal;
 
@@ -412,7 +412,7 @@ class QueryResultColumn PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class QueryResultChunk PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:duckdb_wasm.proto.QueryResultChunk) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:duckdb_webapi.proto.QueryResultChunk) */ {
  public:
   inline QueryResultChunk() : QueryResultChunk(nullptr) {}
   virtual ~QueryResultChunk();
@@ -492,7 +492,7 @@ class QueryResultChunk PROTOBUF_FINAL :
   void InternalSwap(QueryResultChunk* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "duckdb_wasm.proto.QueryResultChunk";
+    return "duckdb_webapi.proto.QueryResultChunk";
   }
   protected:
   explicit QueryResultChunk(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -512,22 +512,22 @@ class QueryResultChunk PROTOBUF_FINAL :
     kRowOffsetFieldNumber = 1,
     kRowCountFieldNumber = 2,
   };
-  // repeated .duckdb_wasm.proto.QueryResultColumn columns = 3;
+  // repeated .duckdb_webapi.proto.QueryResultColumn columns = 3;
   int columns_size() const;
   private:
   int _internal_columns_size() const;
   public:
   void clear_columns();
-  ::duckdb_wasm::proto::QueryResultColumn* mutable_columns(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::duckdb_wasm::proto::QueryResultColumn >*
+  ::duckdb_webapi::proto::QueryResultColumn* mutable_columns(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::duckdb_webapi::proto::QueryResultColumn >*
       mutable_columns();
   private:
-  const ::duckdb_wasm::proto::QueryResultColumn& _internal_columns(int index) const;
-  ::duckdb_wasm::proto::QueryResultColumn* _internal_add_columns();
+  const ::duckdb_webapi::proto::QueryResultColumn& _internal_columns(int index) const;
+  ::duckdb_webapi::proto::QueryResultColumn* _internal_add_columns();
   public:
-  const ::duckdb_wasm::proto::QueryResultColumn& columns(int index) const;
-  ::duckdb_wasm::proto::QueryResultColumn* add_columns();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::duckdb_wasm::proto::QueryResultColumn >&
+  const ::duckdb_webapi::proto::QueryResultColumn& columns(int index) const;
+  ::duckdb_webapi::proto::QueryResultColumn* add_columns();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::duckdb_webapi::proto::QueryResultColumn >&
       columns() const;
 
   // uint32 row_offset = 1;
@@ -548,14 +548,14 @@ class QueryResultChunk PROTOBUF_FINAL :
   void _internal_set_row_count(::PROTOBUF_NAMESPACE_ID::uint32 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:duckdb_wasm.proto.QueryResultChunk)
+  // @@protoc_insertion_point(class_scope:duckdb_webapi.proto.QueryResultChunk)
  private:
   class _Internal;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::duckdb_wasm::proto::QueryResultColumn > columns_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::duckdb_webapi::proto::QueryResultColumn > columns_;
   ::PROTOBUF_NAMESPACE_ID::uint32 row_offset_;
   ::PROTOBUF_NAMESPACE_ID::uint32 row_count_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -564,7 +564,7 @@ class QueryResultChunk PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class QueryResultHeader PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:duckdb_wasm.proto.QueryResultHeader) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:duckdb_webapi.proto.QueryResultHeader) */ {
  public:
   inline QueryResultHeader() : QueryResultHeader(nullptr) {}
   virtual ~QueryResultHeader();
@@ -644,7 +644,7 @@ class QueryResultHeader PROTOBUF_FINAL :
   void InternalSwap(QueryResultHeader* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "duckdb_wasm.proto.QueryResultHeader";
+    return "duckdb_webapi.proto.QueryResultHeader";
   }
   protected:
   explicit QueryResultHeader(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -690,22 +690,22 @@ class QueryResultHeader PROTOBUF_FINAL :
   std::string* _internal_add_column_names();
   public:
 
-  // repeated .duckdb_wasm.proto.SQLType column_sql_types = 7;
+  // repeated .duckdb_webapi.proto.SQLType column_sql_types = 7;
   int column_sql_types_size() const;
   private:
   int _internal_column_sql_types_size() const;
   public:
   void clear_column_sql_types();
-  ::duckdb_wasm::proto::SQLType* mutable_column_sql_types(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::duckdb_wasm::proto::SQLType >*
+  ::duckdb_webapi::proto::SQLType* mutable_column_sql_types(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::duckdb_webapi::proto::SQLType >*
       mutable_column_sql_types();
   private:
-  const ::duckdb_wasm::proto::SQLType& _internal_column_sql_types(int index) const;
-  ::duckdb_wasm::proto::SQLType* _internal_add_column_sql_types();
+  const ::duckdb_webapi::proto::SQLType& _internal_column_sql_types(int index) const;
+  ::duckdb_webapi::proto::SQLType* _internal_add_column_sql_types();
   public:
-  const ::duckdb_wasm::proto::SQLType& column_sql_types(int index) const;
-  ::duckdb_wasm::proto::SQLType* add_column_sql_types();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::duckdb_wasm::proto::SQLType >&
+  const ::duckdb_webapi::proto::SQLType& column_sql_types(int index) const;
+  ::duckdb_webapi::proto::SQLType* add_column_sql_types();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::duckdb_webapi::proto::SQLType >&
       column_sql_types() const;
 
   // uint32 query_id = 1;
@@ -735,7 +735,7 @@ class QueryResultHeader PROTOBUF_FINAL :
   void _internal_set_row_count(::PROTOBUF_NAMESPACE_ID::uint32 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:duckdb_wasm.proto.QueryResultHeader)
+  // @@protoc_insertion_point(class_scope:duckdb_webapi.proto.QueryResultHeader)
  private:
   class _Internal;
 
@@ -743,7 +743,7 @@ class QueryResultHeader PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> column_names_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::duckdb_wasm::proto::SQLType > column_sql_types_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::duckdb_webapi::proto::SQLType > column_sql_types_;
   ::PROTOBUF_NAMESPACE_ID::uint32 query_id_;
   ::PROTOBUF_NAMESPACE_ID::uint32 column_count_;
   ::PROTOBUF_NAMESPACE_ID::uint32 row_count_;
@@ -775,19 +775,19 @@ inline bool QueryResultColumn::_internal_null_mask(int index) const {
   return null_mask_.Get(index);
 }
 inline bool QueryResultColumn::null_mask(int index) const {
-  // @@protoc_insertion_point(field_get:duckdb_wasm.proto.QueryResultColumn.null_mask)
+  // @@protoc_insertion_point(field_get:duckdb_webapi.proto.QueryResultColumn.null_mask)
   return _internal_null_mask(index);
 }
 inline void QueryResultColumn::set_null_mask(int index, bool value) {
   null_mask_.Set(index, value);
-  // @@protoc_insertion_point(field_set:duckdb_wasm.proto.QueryResultColumn.null_mask)
+  // @@protoc_insertion_point(field_set:duckdb_webapi.proto.QueryResultColumn.null_mask)
 }
 inline void QueryResultColumn::_internal_add_null_mask(bool value) {
   null_mask_.Add(value);
 }
 inline void QueryResultColumn::add_null_mask(bool value) {
   _internal_add_null_mask(value);
-  // @@protoc_insertion_point(field_add:duckdb_wasm.proto.QueryResultColumn.null_mask)
+  // @@protoc_insertion_point(field_add:duckdb_webapi.proto.QueryResultColumn.null_mask)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< bool >&
 QueryResultColumn::_internal_null_mask() const {
@@ -795,7 +795,7 @@ QueryResultColumn::_internal_null_mask() const {
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< bool >&
 QueryResultColumn::null_mask() const {
-  // @@protoc_insertion_point(field_list:duckdb_wasm.proto.QueryResultColumn.null_mask)
+  // @@protoc_insertion_point(field_list:duckdb_webapi.proto.QueryResultColumn.null_mask)
   return _internal_null_mask();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< bool >*
@@ -804,7 +804,7 @@ QueryResultColumn::_internal_mutable_null_mask() {
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< bool >*
 QueryResultColumn::mutable_null_mask() {
-  // @@protoc_insertion_point(field_mutable_list:duckdb_wasm.proto.QueryResultColumn.null_mask)
+  // @@protoc_insertion_point(field_mutable_list:duckdb_webapi.proto.QueryResultColumn.null_mask)
   return _internal_mutable_null_mask();
 }
 
@@ -822,19 +822,19 @@ inline bool QueryResultColumn::_internal_rows_bool(int index) const {
   return rows_bool_.Get(index);
 }
 inline bool QueryResultColumn::rows_bool(int index) const {
-  // @@protoc_insertion_point(field_get:duckdb_wasm.proto.QueryResultColumn.rows_bool)
+  // @@protoc_insertion_point(field_get:duckdb_webapi.proto.QueryResultColumn.rows_bool)
   return _internal_rows_bool(index);
 }
 inline void QueryResultColumn::set_rows_bool(int index, bool value) {
   rows_bool_.Set(index, value);
-  // @@protoc_insertion_point(field_set:duckdb_wasm.proto.QueryResultColumn.rows_bool)
+  // @@protoc_insertion_point(field_set:duckdb_webapi.proto.QueryResultColumn.rows_bool)
 }
 inline void QueryResultColumn::_internal_add_rows_bool(bool value) {
   rows_bool_.Add(value);
 }
 inline void QueryResultColumn::add_rows_bool(bool value) {
   _internal_add_rows_bool(value);
-  // @@protoc_insertion_point(field_add:duckdb_wasm.proto.QueryResultColumn.rows_bool)
+  // @@protoc_insertion_point(field_add:duckdb_webapi.proto.QueryResultColumn.rows_bool)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< bool >&
 QueryResultColumn::_internal_rows_bool() const {
@@ -842,7 +842,7 @@ QueryResultColumn::_internal_rows_bool() const {
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< bool >&
 QueryResultColumn::rows_bool() const {
-  // @@protoc_insertion_point(field_list:duckdb_wasm.proto.QueryResultColumn.rows_bool)
+  // @@protoc_insertion_point(field_list:duckdb_webapi.proto.QueryResultColumn.rows_bool)
   return _internal_rows_bool();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< bool >*
@@ -851,7 +851,7 @@ QueryResultColumn::_internal_mutable_rows_bool() {
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< bool >*
 QueryResultColumn::mutable_rows_bool() {
-  // @@protoc_insertion_point(field_mutable_list:duckdb_wasm.proto.QueryResultColumn.rows_bool)
+  // @@protoc_insertion_point(field_mutable_list:duckdb_webapi.proto.QueryResultColumn.rows_bool)
   return _internal_mutable_rows_bool();
 }
 
@@ -869,19 +869,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 QueryResultColumn::_internal_rows_i32(int 
   return rows_i32_.Get(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 QueryResultColumn::rows_i32(int index) const {
-  // @@protoc_insertion_point(field_get:duckdb_wasm.proto.QueryResultColumn.rows_i32)
+  // @@protoc_insertion_point(field_get:duckdb_webapi.proto.QueryResultColumn.rows_i32)
   return _internal_rows_i32(index);
 }
 inline void QueryResultColumn::set_rows_i32(int index, ::PROTOBUF_NAMESPACE_ID::int32 value) {
   rows_i32_.Set(index, value);
-  // @@protoc_insertion_point(field_set:duckdb_wasm.proto.QueryResultColumn.rows_i32)
+  // @@protoc_insertion_point(field_set:duckdb_webapi.proto.QueryResultColumn.rows_i32)
 }
 inline void QueryResultColumn::_internal_add_rows_i32(::PROTOBUF_NAMESPACE_ID::int32 value) {
   rows_i32_.Add(value);
 }
 inline void QueryResultColumn::add_rows_i32(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_add_rows_i32(value);
-  // @@protoc_insertion_point(field_add:duckdb_wasm.proto.QueryResultColumn.rows_i32)
+  // @@protoc_insertion_point(field_add:duckdb_webapi.proto.QueryResultColumn.rows_i32)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::int32 >&
 QueryResultColumn::_internal_rows_i32() const {
@@ -889,7 +889,7 @@ QueryResultColumn::_internal_rows_i32() const {
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::int32 >&
 QueryResultColumn::rows_i32() const {
-  // @@protoc_insertion_point(field_list:duckdb_wasm.proto.QueryResultColumn.rows_i32)
+  // @@protoc_insertion_point(field_list:duckdb_webapi.proto.QueryResultColumn.rows_i32)
   return _internal_rows_i32();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::int32 >*
@@ -898,7 +898,7 @@ QueryResultColumn::_internal_mutable_rows_i32() {
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::int32 >*
 QueryResultColumn::mutable_rows_i32() {
-  // @@protoc_insertion_point(field_mutable_list:duckdb_wasm.proto.QueryResultColumn.rows_i32)
+  // @@protoc_insertion_point(field_mutable_list:duckdb_webapi.proto.QueryResultColumn.rows_i32)
   return _internal_mutable_rows_i32();
 }
 
@@ -916,19 +916,19 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 QueryResultColumn::_internal_rows_u32(int
   return rows_u32_.Get(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::uint32 QueryResultColumn::rows_u32(int index) const {
-  // @@protoc_insertion_point(field_get:duckdb_wasm.proto.QueryResultColumn.rows_u32)
+  // @@protoc_insertion_point(field_get:duckdb_webapi.proto.QueryResultColumn.rows_u32)
   return _internal_rows_u32(index);
 }
 inline void QueryResultColumn::set_rows_u32(int index, ::PROTOBUF_NAMESPACE_ID::uint32 value) {
   rows_u32_.Set(index, value);
-  // @@protoc_insertion_point(field_set:duckdb_wasm.proto.QueryResultColumn.rows_u32)
+  // @@protoc_insertion_point(field_set:duckdb_webapi.proto.QueryResultColumn.rows_u32)
 }
 inline void QueryResultColumn::_internal_add_rows_u32(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   rows_u32_.Add(value);
 }
 inline void QueryResultColumn::add_rows_u32(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   _internal_add_rows_u32(value);
-  // @@protoc_insertion_point(field_add:duckdb_wasm.proto.QueryResultColumn.rows_u32)
+  // @@protoc_insertion_point(field_add:duckdb_webapi.proto.QueryResultColumn.rows_u32)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >&
 QueryResultColumn::_internal_rows_u32() const {
@@ -936,7 +936,7 @@ QueryResultColumn::_internal_rows_u32() const {
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >&
 QueryResultColumn::rows_u32() const {
-  // @@protoc_insertion_point(field_list:duckdb_wasm.proto.QueryResultColumn.rows_u32)
+  // @@protoc_insertion_point(field_list:duckdb_webapi.proto.QueryResultColumn.rows_u32)
   return _internal_rows_u32();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >*
@@ -945,7 +945,7 @@ QueryResultColumn::_internal_mutable_rows_u32() {
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >*
 QueryResultColumn::mutable_rows_u32() {
-  // @@protoc_insertion_point(field_mutable_list:duckdb_wasm.proto.QueryResultColumn.rows_u32)
+  // @@protoc_insertion_point(field_mutable_list:duckdb_webapi.proto.QueryResultColumn.rows_u32)
   return _internal_mutable_rows_u32();
 }
 
@@ -963,19 +963,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 QueryResultColumn::_internal_rows_i64(int 
   return rows_i64_.Get(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::int64 QueryResultColumn::rows_i64(int index) const {
-  // @@protoc_insertion_point(field_get:duckdb_wasm.proto.QueryResultColumn.rows_i64)
+  // @@protoc_insertion_point(field_get:duckdb_webapi.proto.QueryResultColumn.rows_i64)
   return _internal_rows_i64(index);
 }
 inline void QueryResultColumn::set_rows_i64(int index, ::PROTOBUF_NAMESPACE_ID::int64 value) {
   rows_i64_.Set(index, value);
-  // @@protoc_insertion_point(field_set:duckdb_wasm.proto.QueryResultColumn.rows_i64)
+  // @@protoc_insertion_point(field_set:duckdb_webapi.proto.QueryResultColumn.rows_i64)
 }
 inline void QueryResultColumn::_internal_add_rows_i64(::PROTOBUF_NAMESPACE_ID::int64 value) {
   rows_i64_.Add(value);
 }
 inline void QueryResultColumn::add_rows_i64(::PROTOBUF_NAMESPACE_ID::int64 value) {
   _internal_add_rows_i64(value);
-  // @@protoc_insertion_point(field_add:duckdb_wasm.proto.QueryResultColumn.rows_i64)
+  // @@protoc_insertion_point(field_add:duckdb_webapi.proto.QueryResultColumn.rows_i64)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::int64 >&
 QueryResultColumn::_internal_rows_i64() const {
@@ -983,7 +983,7 @@ QueryResultColumn::_internal_rows_i64() const {
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::int64 >&
 QueryResultColumn::rows_i64() const {
-  // @@protoc_insertion_point(field_list:duckdb_wasm.proto.QueryResultColumn.rows_i64)
+  // @@protoc_insertion_point(field_list:duckdb_webapi.proto.QueryResultColumn.rows_i64)
   return _internal_rows_i64();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::int64 >*
@@ -992,7 +992,7 @@ QueryResultColumn::_internal_mutable_rows_i64() {
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::int64 >*
 QueryResultColumn::mutable_rows_i64() {
-  // @@protoc_insertion_point(field_mutable_list:duckdb_wasm.proto.QueryResultColumn.rows_i64)
+  // @@protoc_insertion_point(field_mutable_list:duckdb_webapi.proto.QueryResultColumn.rows_i64)
   return _internal_mutable_rows_i64();
 }
 
@@ -1010,19 +1010,19 @@ inline ::PROTOBUF_NAMESPACE_ID::uint64 QueryResultColumn::_internal_rows_u64(int
   return rows_u64_.Get(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::uint64 QueryResultColumn::rows_u64(int index) const {
-  // @@protoc_insertion_point(field_get:duckdb_wasm.proto.QueryResultColumn.rows_u64)
+  // @@protoc_insertion_point(field_get:duckdb_webapi.proto.QueryResultColumn.rows_u64)
   return _internal_rows_u64(index);
 }
 inline void QueryResultColumn::set_rows_u64(int index, ::PROTOBUF_NAMESPACE_ID::uint64 value) {
   rows_u64_.Set(index, value);
-  // @@protoc_insertion_point(field_set:duckdb_wasm.proto.QueryResultColumn.rows_u64)
+  // @@protoc_insertion_point(field_set:duckdb_webapi.proto.QueryResultColumn.rows_u64)
 }
 inline void QueryResultColumn::_internal_add_rows_u64(::PROTOBUF_NAMESPACE_ID::uint64 value) {
   rows_u64_.Add(value);
 }
 inline void QueryResultColumn::add_rows_u64(::PROTOBUF_NAMESPACE_ID::uint64 value) {
   _internal_add_rows_u64(value);
-  // @@protoc_insertion_point(field_add:duckdb_wasm.proto.QueryResultColumn.rows_u64)
+  // @@protoc_insertion_point(field_add:duckdb_webapi.proto.QueryResultColumn.rows_u64)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
 QueryResultColumn::_internal_rows_u64() const {
@@ -1030,7 +1030,7 @@ QueryResultColumn::_internal_rows_u64() const {
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
 QueryResultColumn::rows_u64() const {
-  // @@protoc_insertion_point(field_list:duckdb_wasm.proto.QueryResultColumn.rows_u64)
+  // @@protoc_insertion_point(field_list:duckdb_webapi.proto.QueryResultColumn.rows_u64)
   return _internal_rows_u64();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
@@ -1039,7 +1039,7 @@ QueryResultColumn::_internal_mutable_rows_u64() {
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
 QueryResultColumn::mutable_rows_u64() {
-  // @@protoc_insertion_point(field_mutable_list:duckdb_wasm.proto.QueryResultColumn.rows_u64)
+  // @@protoc_insertion_point(field_mutable_list:duckdb_webapi.proto.QueryResultColumn.rows_u64)
   return _internal_mutable_rows_u64();
 }
 
@@ -1057,19 +1057,19 @@ inline float QueryResultColumn::_internal_rows_f32(int index) const {
   return rows_f32_.Get(index);
 }
 inline float QueryResultColumn::rows_f32(int index) const {
-  // @@protoc_insertion_point(field_get:duckdb_wasm.proto.QueryResultColumn.rows_f32)
+  // @@protoc_insertion_point(field_get:duckdb_webapi.proto.QueryResultColumn.rows_f32)
   return _internal_rows_f32(index);
 }
 inline void QueryResultColumn::set_rows_f32(int index, float value) {
   rows_f32_.Set(index, value);
-  // @@protoc_insertion_point(field_set:duckdb_wasm.proto.QueryResultColumn.rows_f32)
+  // @@protoc_insertion_point(field_set:duckdb_webapi.proto.QueryResultColumn.rows_f32)
 }
 inline void QueryResultColumn::_internal_add_rows_f32(float value) {
   rows_f32_.Add(value);
 }
 inline void QueryResultColumn::add_rows_f32(float value) {
   _internal_add_rows_f32(value);
-  // @@protoc_insertion_point(field_add:duckdb_wasm.proto.QueryResultColumn.rows_f32)
+  // @@protoc_insertion_point(field_add:duckdb_webapi.proto.QueryResultColumn.rows_f32)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< float >&
 QueryResultColumn::_internal_rows_f32() const {
@@ -1077,7 +1077,7 @@ QueryResultColumn::_internal_rows_f32() const {
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< float >&
 QueryResultColumn::rows_f32() const {
-  // @@protoc_insertion_point(field_list:duckdb_wasm.proto.QueryResultColumn.rows_f32)
+  // @@protoc_insertion_point(field_list:duckdb_webapi.proto.QueryResultColumn.rows_f32)
   return _internal_rows_f32();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< float >*
@@ -1086,7 +1086,7 @@ QueryResultColumn::_internal_mutable_rows_f32() {
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< float >*
 QueryResultColumn::mutable_rows_f32() {
-  // @@protoc_insertion_point(field_mutable_list:duckdb_wasm.proto.QueryResultColumn.rows_f32)
+  // @@protoc_insertion_point(field_mutable_list:duckdb_webapi.proto.QueryResultColumn.rows_f32)
   return _internal_mutable_rows_f32();
 }
 
@@ -1104,19 +1104,19 @@ inline double QueryResultColumn::_internal_rows_f64(int index) const {
   return rows_f64_.Get(index);
 }
 inline double QueryResultColumn::rows_f64(int index) const {
-  // @@protoc_insertion_point(field_get:duckdb_wasm.proto.QueryResultColumn.rows_f64)
+  // @@protoc_insertion_point(field_get:duckdb_webapi.proto.QueryResultColumn.rows_f64)
   return _internal_rows_f64(index);
 }
 inline void QueryResultColumn::set_rows_f64(int index, double value) {
   rows_f64_.Set(index, value);
-  // @@protoc_insertion_point(field_set:duckdb_wasm.proto.QueryResultColumn.rows_f64)
+  // @@protoc_insertion_point(field_set:duckdb_webapi.proto.QueryResultColumn.rows_f64)
 }
 inline void QueryResultColumn::_internal_add_rows_f64(double value) {
   rows_f64_.Add(value);
 }
 inline void QueryResultColumn::add_rows_f64(double value) {
   _internal_add_rows_f64(value);
-  // @@protoc_insertion_point(field_add:duckdb_wasm.proto.QueryResultColumn.rows_f64)
+  // @@protoc_insertion_point(field_add:duckdb_webapi.proto.QueryResultColumn.rows_f64)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >&
 QueryResultColumn::_internal_rows_f64() const {
@@ -1124,7 +1124,7 @@ QueryResultColumn::_internal_rows_f64() const {
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >&
 QueryResultColumn::rows_f64() const {
-  // @@protoc_insertion_point(field_list:duckdb_wasm.proto.QueryResultColumn.rows_f64)
+  // @@protoc_insertion_point(field_list:duckdb_webapi.proto.QueryResultColumn.rows_f64)
   return _internal_rows_f64();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >*
@@ -1133,7 +1133,7 @@ QueryResultColumn::_internal_mutable_rows_f64() {
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >*
 QueryResultColumn::mutable_rows_f64() {
-  // @@protoc_insertion_point(field_mutable_list:duckdb_wasm.proto.QueryResultColumn.rows_f64)
+  // @@protoc_insertion_point(field_mutable_list:duckdb_webapi.proto.QueryResultColumn.rows_f64)
   return _internal_mutable_rows_f64();
 }
 
@@ -1148,66 +1148,66 @@ inline void QueryResultColumn::clear_rows_str() {
   rows_str_.Clear();
 }
 inline std::string* QueryResultColumn::add_rows_str() {
-  // @@protoc_insertion_point(field_add_mutable:duckdb_wasm.proto.QueryResultColumn.rows_str)
+  // @@protoc_insertion_point(field_add_mutable:duckdb_webapi.proto.QueryResultColumn.rows_str)
   return _internal_add_rows_str();
 }
 inline const std::string& QueryResultColumn::_internal_rows_str(int index) const {
   return rows_str_.Get(index);
 }
 inline const std::string& QueryResultColumn::rows_str(int index) const {
-  // @@protoc_insertion_point(field_get:duckdb_wasm.proto.QueryResultColumn.rows_str)
+  // @@protoc_insertion_point(field_get:duckdb_webapi.proto.QueryResultColumn.rows_str)
   return _internal_rows_str(index);
 }
 inline std::string* QueryResultColumn::mutable_rows_str(int index) {
-  // @@protoc_insertion_point(field_mutable:duckdb_wasm.proto.QueryResultColumn.rows_str)
+  // @@protoc_insertion_point(field_mutable:duckdb_webapi.proto.QueryResultColumn.rows_str)
   return rows_str_.Mutable(index);
 }
 inline void QueryResultColumn::set_rows_str(int index, const std::string& value) {
-  // @@protoc_insertion_point(field_set:duckdb_wasm.proto.QueryResultColumn.rows_str)
+  // @@protoc_insertion_point(field_set:duckdb_webapi.proto.QueryResultColumn.rows_str)
   rows_str_.Mutable(index)->assign(value);
 }
 inline void QueryResultColumn::set_rows_str(int index, std::string&& value) {
-  // @@protoc_insertion_point(field_set:duckdb_wasm.proto.QueryResultColumn.rows_str)
+  // @@protoc_insertion_point(field_set:duckdb_webapi.proto.QueryResultColumn.rows_str)
   rows_str_.Mutable(index)->assign(std::move(value));
 }
 inline void QueryResultColumn::set_rows_str(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   rows_str_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:duckdb_wasm.proto.QueryResultColumn.rows_str)
+  // @@protoc_insertion_point(field_set_char:duckdb_webapi.proto.QueryResultColumn.rows_str)
 }
 inline void QueryResultColumn::set_rows_str(int index, const char* value, size_t size) {
   rows_str_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:duckdb_wasm.proto.QueryResultColumn.rows_str)
+  // @@protoc_insertion_point(field_set_pointer:duckdb_webapi.proto.QueryResultColumn.rows_str)
 }
 inline std::string* QueryResultColumn::_internal_add_rows_str() {
   return rows_str_.Add();
 }
 inline void QueryResultColumn::add_rows_str(const std::string& value) {
   rows_str_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:duckdb_wasm.proto.QueryResultColumn.rows_str)
+  // @@protoc_insertion_point(field_add:duckdb_webapi.proto.QueryResultColumn.rows_str)
 }
 inline void QueryResultColumn::add_rows_str(std::string&& value) {
   rows_str_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:duckdb_wasm.proto.QueryResultColumn.rows_str)
+  // @@protoc_insertion_point(field_add:duckdb_webapi.proto.QueryResultColumn.rows_str)
 }
 inline void QueryResultColumn::add_rows_str(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   rows_str_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:duckdb_wasm.proto.QueryResultColumn.rows_str)
+  // @@protoc_insertion_point(field_add_char:duckdb_webapi.proto.QueryResultColumn.rows_str)
 }
 inline void QueryResultColumn::add_rows_str(const char* value, size_t size) {
   rows_str_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:duckdb_wasm.proto.QueryResultColumn.rows_str)
+  // @@protoc_insertion_point(field_add_pointer:duckdb_webapi.proto.QueryResultColumn.rows_str)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
 QueryResultColumn::rows_str() const {
-  // @@protoc_insertion_point(field_list:duckdb_wasm.proto.QueryResultColumn.rows_str)
+  // @@protoc_insertion_point(field_list:duckdb_webapi.proto.QueryResultColumn.rows_str)
   return rows_str_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
 QueryResultColumn::mutable_rows_str() {
-  // @@protoc_insertion_point(field_mutable_list:duckdb_wasm.proto.QueryResultColumn.rows_str)
+  // @@protoc_insertion_point(field_mutable_list:duckdb_webapi.proto.QueryResultColumn.rows_str)
   return &rows_str_;
 }
 
@@ -1223,7 +1223,7 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 QueryResultChunk::_internal_row_offset() 
   return row_offset_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::uint32 QueryResultChunk::row_offset() const {
-  // @@protoc_insertion_point(field_get:duckdb_wasm.proto.QueryResultChunk.row_offset)
+  // @@protoc_insertion_point(field_get:duckdb_webapi.proto.QueryResultChunk.row_offset)
   return _internal_row_offset();
 }
 inline void QueryResultChunk::_internal_set_row_offset(::PROTOBUF_NAMESPACE_ID::uint32 value) {
@@ -1232,7 +1232,7 @@ inline void QueryResultChunk::_internal_set_row_offset(::PROTOBUF_NAMESPACE_ID::
 }
 inline void QueryResultChunk::set_row_offset(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   _internal_set_row_offset(value);
-  // @@protoc_insertion_point(field_set:duckdb_wasm.proto.QueryResultChunk.row_offset)
+  // @@protoc_insertion_point(field_set:duckdb_webapi.proto.QueryResultChunk.row_offset)
 }
 
 // uint32 row_count = 2;
@@ -1243,7 +1243,7 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 QueryResultChunk::_internal_row_count() c
   return row_count_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::uint32 QueryResultChunk::row_count() const {
-  // @@protoc_insertion_point(field_get:duckdb_wasm.proto.QueryResultChunk.row_count)
+  // @@protoc_insertion_point(field_get:duckdb_webapi.proto.QueryResultChunk.row_count)
   return _internal_row_count();
 }
 inline void QueryResultChunk::_internal_set_row_count(::PROTOBUF_NAMESPACE_ID::uint32 value) {
@@ -1252,10 +1252,10 @@ inline void QueryResultChunk::_internal_set_row_count(::PROTOBUF_NAMESPACE_ID::u
 }
 inline void QueryResultChunk::set_row_count(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   _internal_set_row_count(value);
-  // @@protoc_insertion_point(field_set:duckdb_wasm.proto.QueryResultChunk.row_count)
+  // @@protoc_insertion_point(field_set:duckdb_webapi.proto.QueryResultChunk.row_count)
 }
 
-// repeated .duckdb_wasm.proto.QueryResultColumn columns = 3;
+// repeated .duckdb_webapi.proto.QueryResultColumn columns = 3;
 inline int QueryResultChunk::_internal_columns_size() const {
   return columns_.size();
 }
@@ -1265,32 +1265,32 @@ inline int QueryResultChunk::columns_size() const {
 inline void QueryResultChunk::clear_columns() {
   columns_.Clear();
 }
-inline ::duckdb_wasm::proto::QueryResultColumn* QueryResultChunk::mutable_columns(int index) {
-  // @@protoc_insertion_point(field_mutable:duckdb_wasm.proto.QueryResultChunk.columns)
+inline ::duckdb_webapi::proto::QueryResultColumn* QueryResultChunk::mutable_columns(int index) {
+  // @@protoc_insertion_point(field_mutable:duckdb_webapi.proto.QueryResultChunk.columns)
   return columns_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::duckdb_wasm::proto::QueryResultColumn >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::duckdb_webapi::proto::QueryResultColumn >*
 QueryResultChunk::mutable_columns() {
-  // @@protoc_insertion_point(field_mutable_list:duckdb_wasm.proto.QueryResultChunk.columns)
+  // @@protoc_insertion_point(field_mutable_list:duckdb_webapi.proto.QueryResultChunk.columns)
   return &columns_;
 }
-inline const ::duckdb_wasm::proto::QueryResultColumn& QueryResultChunk::_internal_columns(int index) const {
+inline const ::duckdb_webapi::proto::QueryResultColumn& QueryResultChunk::_internal_columns(int index) const {
   return columns_.Get(index);
 }
-inline const ::duckdb_wasm::proto::QueryResultColumn& QueryResultChunk::columns(int index) const {
-  // @@protoc_insertion_point(field_get:duckdb_wasm.proto.QueryResultChunk.columns)
+inline const ::duckdb_webapi::proto::QueryResultColumn& QueryResultChunk::columns(int index) const {
+  // @@protoc_insertion_point(field_get:duckdb_webapi.proto.QueryResultChunk.columns)
   return _internal_columns(index);
 }
-inline ::duckdb_wasm::proto::QueryResultColumn* QueryResultChunk::_internal_add_columns() {
+inline ::duckdb_webapi::proto::QueryResultColumn* QueryResultChunk::_internal_add_columns() {
   return columns_.Add();
 }
-inline ::duckdb_wasm::proto::QueryResultColumn* QueryResultChunk::add_columns() {
-  // @@protoc_insertion_point(field_add:duckdb_wasm.proto.QueryResultChunk.columns)
+inline ::duckdb_webapi::proto::QueryResultColumn* QueryResultChunk::add_columns() {
+  // @@protoc_insertion_point(field_add:duckdb_webapi.proto.QueryResultChunk.columns)
   return _internal_add_columns();
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::duckdb_wasm::proto::QueryResultColumn >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::duckdb_webapi::proto::QueryResultColumn >&
 QueryResultChunk::columns() const {
-  // @@protoc_insertion_point(field_list:duckdb_wasm.proto.QueryResultChunk.columns)
+  // @@protoc_insertion_point(field_list:duckdb_webapi.proto.QueryResultChunk.columns)
   return columns_;
 }
 
@@ -1306,7 +1306,7 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 QueryResultHeader::_internal_query_id() c
   return query_id_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::uint32 QueryResultHeader::query_id() const {
-  // @@protoc_insertion_point(field_get:duckdb_wasm.proto.QueryResultHeader.query_id)
+  // @@protoc_insertion_point(field_get:duckdb_webapi.proto.QueryResultHeader.query_id)
   return _internal_query_id();
 }
 inline void QueryResultHeader::_internal_set_query_id(::PROTOBUF_NAMESPACE_ID::uint32 value) {
@@ -1315,7 +1315,7 @@ inline void QueryResultHeader::_internal_set_query_id(::PROTOBUF_NAMESPACE_ID::u
 }
 inline void QueryResultHeader::set_query_id(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   _internal_set_query_id(value);
-  // @@protoc_insertion_point(field_set:duckdb_wasm.proto.QueryResultHeader.query_id)
+  // @@protoc_insertion_point(field_set:duckdb_webapi.proto.QueryResultHeader.query_id)
 }
 
 // uint32 column_count = 3;
@@ -1326,7 +1326,7 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 QueryResultHeader::_internal_column_count
   return column_count_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::uint32 QueryResultHeader::column_count() const {
-  // @@protoc_insertion_point(field_get:duckdb_wasm.proto.QueryResultHeader.column_count)
+  // @@protoc_insertion_point(field_get:duckdb_webapi.proto.QueryResultHeader.column_count)
   return _internal_column_count();
 }
 inline void QueryResultHeader::_internal_set_column_count(::PROTOBUF_NAMESPACE_ID::uint32 value) {
@@ -1335,7 +1335,7 @@ inline void QueryResultHeader::_internal_set_column_count(::PROTOBUF_NAMESPACE_I
 }
 inline void QueryResultHeader::set_column_count(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   _internal_set_column_count(value);
-  // @@protoc_insertion_point(field_set:duckdb_wasm.proto.QueryResultHeader.column_count)
+  // @@protoc_insertion_point(field_set:duckdb_webapi.proto.QueryResultHeader.column_count)
 }
 
 // uint32 row_count = 4;
@@ -1346,7 +1346,7 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 QueryResultHeader::_internal_row_count() 
   return row_count_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::uint32 QueryResultHeader::row_count() const {
-  // @@protoc_insertion_point(field_get:duckdb_wasm.proto.QueryResultHeader.row_count)
+  // @@protoc_insertion_point(field_get:duckdb_webapi.proto.QueryResultHeader.row_count)
   return _internal_row_count();
 }
 inline void QueryResultHeader::_internal_set_row_count(::PROTOBUF_NAMESPACE_ID::uint32 value) {
@@ -1355,7 +1355,7 @@ inline void QueryResultHeader::_internal_set_row_count(::PROTOBUF_NAMESPACE_ID::
 }
 inline void QueryResultHeader::set_row_count(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   _internal_set_row_count(value);
-  // @@protoc_insertion_point(field_set:duckdb_wasm.proto.QueryResultHeader.row_count)
+  // @@protoc_insertion_point(field_set:duckdb_webapi.proto.QueryResultHeader.row_count)
 }
 
 // repeated string column_names = 5;
@@ -1369,102 +1369,102 @@ inline void QueryResultHeader::clear_column_names() {
   column_names_.Clear();
 }
 inline std::string* QueryResultHeader::add_column_names() {
-  // @@protoc_insertion_point(field_add_mutable:duckdb_wasm.proto.QueryResultHeader.column_names)
+  // @@protoc_insertion_point(field_add_mutable:duckdb_webapi.proto.QueryResultHeader.column_names)
   return _internal_add_column_names();
 }
 inline const std::string& QueryResultHeader::_internal_column_names(int index) const {
   return column_names_.Get(index);
 }
 inline const std::string& QueryResultHeader::column_names(int index) const {
-  // @@protoc_insertion_point(field_get:duckdb_wasm.proto.QueryResultHeader.column_names)
+  // @@protoc_insertion_point(field_get:duckdb_webapi.proto.QueryResultHeader.column_names)
   return _internal_column_names(index);
 }
 inline std::string* QueryResultHeader::mutable_column_names(int index) {
-  // @@protoc_insertion_point(field_mutable:duckdb_wasm.proto.QueryResultHeader.column_names)
+  // @@protoc_insertion_point(field_mutable:duckdb_webapi.proto.QueryResultHeader.column_names)
   return column_names_.Mutable(index);
 }
 inline void QueryResultHeader::set_column_names(int index, const std::string& value) {
-  // @@protoc_insertion_point(field_set:duckdb_wasm.proto.QueryResultHeader.column_names)
+  // @@protoc_insertion_point(field_set:duckdb_webapi.proto.QueryResultHeader.column_names)
   column_names_.Mutable(index)->assign(value);
 }
 inline void QueryResultHeader::set_column_names(int index, std::string&& value) {
-  // @@protoc_insertion_point(field_set:duckdb_wasm.proto.QueryResultHeader.column_names)
+  // @@protoc_insertion_point(field_set:duckdb_webapi.proto.QueryResultHeader.column_names)
   column_names_.Mutable(index)->assign(std::move(value));
 }
 inline void QueryResultHeader::set_column_names(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   column_names_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:duckdb_wasm.proto.QueryResultHeader.column_names)
+  // @@protoc_insertion_point(field_set_char:duckdb_webapi.proto.QueryResultHeader.column_names)
 }
 inline void QueryResultHeader::set_column_names(int index, const char* value, size_t size) {
   column_names_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:duckdb_wasm.proto.QueryResultHeader.column_names)
+  // @@protoc_insertion_point(field_set_pointer:duckdb_webapi.proto.QueryResultHeader.column_names)
 }
 inline std::string* QueryResultHeader::_internal_add_column_names() {
   return column_names_.Add();
 }
 inline void QueryResultHeader::add_column_names(const std::string& value) {
   column_names_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:duckdb_wasm.proto.QueryResultHeader.column_names)
+  // @@protoc_insertion_point(field_add:duckdb_webapi.proto.QueryResultHeader.column_names)
 }
 inline void QueryResultHeader::add_column_names(std::string&& value) {
   column_names_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:duckdb_wasm.proto.QueryResultHeader.column_names)
+  // @@protoc_insertion_point(field_add:duckdb_webapi.proto.QueryResultHeader.column_names)
 }
 inline void QueryResultHeader::add_column_names(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   column_names_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:duckdb_wasm.proto.QueryResultHeader.column_names)
+  // @@protoc_insertion_point(field_add_char:duckdb_webapi.proto.QueryResultHeader.column_names)
 }
 inline void QueryResultHeader::add_column_names(const char* value, size_t size) {
   column_names_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:duckdb_wasm.proto.QueryResultHeader.column_names)
+  // @@protoc_insertion_point(field_add_pointer:duckdb_webapi.proto.QueryResultHeader.column_names)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
 QueryResultHeader::column_names() const {
-  // @@protoc_insertion_point(field_list:duckdb_wasm.proto.QueryResultHeader.column_names)
+  // @@protoc_insertion_point(field_list:duckdb_webapi.proto.QueryResultHeader.column_names)
   return column_names_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
 QueryResultHeader::mutable_column_names() {
-  // @@protoc_insertion_point(field_mutable_list:duckdb_wasm.proto.QueryResultHeader.column_names)
+  // @@protoc_insertion_point(field_mutable_list:duckdb_webapi.proto.QueryResultHeader.column_names)
   return &column_names_;
 }
 
-// repeated .duckdb_wasm.proto.SQLType column_sql_types = 7;
+// repeated .duckdb_webapi.proto.SQLType column_sql_types = 7;
 inline int QueryResultHeader::_internal_column_sql_types_size() const {
   return column_sql_types_.size();
 }
 inline int QueryResultHeader::column_sql_types_size() const {
   return _internal_column_sql_types_size();
 }
-inline ::duckdb_wasm::proto::SQLType* QueryResultHeader::mutable_column_sql_types(int index) {
-  // @@protoc_insertion_point(field_mutable:duckdb_wasm.proto.QueryResultHeader.column_sql_types)
+inline ::duckdb_webapi::proto::SQLType* QueryResultHeader::mutable_column_sql_types(int index) {
+  // @@protoc_insertion_point(field_mutable:duckdb_webapi.proto.QueryResultHeader.column_sql_types)
   return column_sql_types_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::duckdb_wasm::proto::SQLType >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::duckdb_webapi::proto::SQLType >*
 QueryResultHeader::mutable_column_sql_types() {
-  // @@protoc_insertion_point(field_mutable_list:duckdb_wasm.proto.QueryResultHeader.column_sql_types)
+  // @@protoc_insertion_point(field_mutable_list:duckdb_webapi.proto.QueryResultHeader.column_sql_types)
   return &column_sql_types_;
 }
-inline const ::duckdb_wasm::proto::SQLType& QueryResultHeader::_internal_column_sql_types(int index) const {
+inline const ::duckdb_webapi::proto::SQLType& QueryResultHeader::_internal_column_sql_types(int index) const {
   return column_sql_types_.Get(index);
 }
-inline const ::duckdb_wasm::proto::SQLType& QueryResultHeader::column_sql_types(int index) const {
-  // @@protoc_insertion_point(field_get:duckdb_wasm.proto.QueryResultHeader.column_sql_types)
+inline const ::duckdb_webapi::proto::SQLType& QueryResultHeader::column_sql_types(int index) const {
+  // @@protoc_insertion_point(field_get:duckdb_webapi.proto.QueryResultHeader.column_sql_types)
   return _internal_column_sql_types(index);
 }
-inline ::duckdb_wasm::proto::SQLType* QueryResultHeader::_internal_add_column_sql_types() {
+inline ::duckdb_webapi::proto::SQLType* QueryResultHeader::_internal_add_column_sql_types() {
   return column_sql_types_.Add();
 }
-inline ::duckdb_wasm::proto::SQLType* QueryResultHeader::add_column_sql_types() {
-  // @@protoc_insertion_point(field_add:duckdb_wasm.proto.QueryResultHeader.column_sql_types)
+inline ::duckdb_webapi::proto::SQLType* QueryResultHeader::add_column_sql_types() {
+  // @@protoc_insertion_point(field_add:duckdb_webapi.proto.QueryResultHeader.column_sql_types)
   return _internal_add_column_sql_types();
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::duckdb_wasm::proto::SQLType >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::duckdb_webapi::proto::SQLType >&
 QueryResultHeader::column_sql_types() const {
-  // @@protoc_insertion_point(field_list:duckdb_wasm.proto.QueryResultHeader.column_sql_types)
+  // @@protoc_insertion_point(field_list:duckdb_webapi.proto.QueryResultHeader.column_sql_types)
   return column_sql_types_;
 }
 
@@ -1479,7 +1479,7 @@ QueryResultHeader::column_sql_types() const {
 // @@protoc_insertion_point(namespace_scope)
 
 }  // namespace proto
-}  // namespace duckdb_wasm
+}  // namespace duckdb_webapi
 
 // @@protoc_insertion_point(global_scope)
 

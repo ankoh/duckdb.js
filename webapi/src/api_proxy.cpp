@@ -1,10 +1,10 @@
 #include <iostream>
 #include "spdlog/sinks/stdout_sinks.h"
 #include "spdlog/spdlog.h"
-#include "duckdb_wasm/proto/api.pb.h"
-#include "duckdb_wasm/api.h"
+#include "duckdb_webapi/proto/api.pb.h"
+#include "duckdb_webapi/api.h"
 
-using namespace duckdb_wasm;
+using namespace duckdb_webapi;
 
 static std::unique_ptr<WebAPI> instance;
 

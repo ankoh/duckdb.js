@@ -52,17 +52,17 @@ struct TableStruct_query_5fplan_2eproto {
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
   static const ::PROTOBUF_NAMESPACE_ID::uint32 offsets[];
 };
-namespace duckdb_wasm {
+namespace duckdb_webapi {
 namespace proto {
 class QueryPlan;
 class QueryPlanDefaultTypeInternal;
 extern QueryPlanDefaultTypeInternal _QueryPlan_default_instance_;
 }  // namespace proto
-}  // namespace duckdb_wasm
+}  // namespace duckdb_webapi
 PROTOBUF_NAMESPACE_OPEN
-template<> ::duckdb_wasm::proto::QueryPlan* Arena::CreateMaybeMessage<::duckdb_wasm::proto::QueryPlan>(Arena*);
+template<> ::duckdb_webapi::proto::QueryPlan* Arena::CreateMaybeMessage<::duckdb_webapi::proto::QueryPlan>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
-namespace duckdb_wasm {
+namespace duckdb_webapi {
 namespace proto {
 
 enum LogicalOperatorType : int {
@@ -132,7 +132,7 @@ bool LogicalOperatorType_Parse(
 // ===================================================================
 
 class QueryPlan PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:duckdb_wasm.proto.QueryPlan) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:duckdb_webapi.proto.QueryPlan) */ {
  public:
   inline QueryPlan() : QueryPlan(nullptr) {}
   virtual ~QueryPlan();
@@ -212,7 +212,7 @@ class QueryPlan PROTOBUF_FINAL :
   void InternalSwap(QueryPlan* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "duckdb_wasm.proto.QueryPlan";
+    return "duckdb_webapi.proto.QueryPlan";
   }
   protected:
   explicit QueryPlan(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -276,24 +276,24 @@ class QueryPlan PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
       mutable_operator_child_offsets();
 
-  // repeated .duckdb_wasm.proto.LogicalOperatorType operator_types = 3;
+  // repeated .duckdb_webapi.proto.LogicalOperatorType operator_types = 3;
   int operator_types_size() const;
   private:
   int _internal_operator_types_size() const;
   public:
   void clear_operator_types();
   private:
-  ::duckdb_wasm::proto::LogicalOperatorType _internal_operator_types(int index) const;
-  void _internal_add_operator_types(::duckdb_wasm::proto::LogicalOperatorType value);
+  ::duckdb_webapi::proto::LogicalOperatorType _internal_operator_types(int index) const;
+  void _internal_add_operator_types(::duckdb_webapi::proto::LogicalOperatorType value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField<int>* _internal_mutable_operator_types();
   public:
-  ::duckdb_wasm::proto::LogicalOperatorType operator_types(int index) const;
-  void set_operator_types(int index, ::duckdb_wasm::proto::LogicalOperatorType value);
-  void add_operator_types(::duckdb_wasm::proto::LogicalOperatorType value);
+  ::duckdb_webapi::proto::LogicalOperatorType operator_types(int index) const;
+  void set_operator_types(int index, ::duckdb_webapi::proto::LogicalOperatorType value);
+  void add_operator_types(::duckdb_webapi::proto::LogicalOperatorType value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField<int>& operator_types() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField<int>* mutable_operator_types();
 
-  // @@protoc_insertion_point(class_scope:duckdb_wasm.proto.QueryPlan)
+  // @@protoc_insertion_point(class_scope:duckdb_webapi.proto.QueryPlan)
  private:
   class _Internal;
 
@@ -334,19 +334,19 @@ inline ::PROTOBUF_NAMESPACE_ID::uint64 QueryPlan::_internal_operator_children(in
   return operator_children_.Get(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::uint64 QueryPlan::operator_children(int index) const {
-  // @@protoc_insertion_point(field_get:duckdb_wasm.proto.QueryPlan.operator_children)
+  // @@protoc_insertion_point(field_get:duckdb_webapi.proto.QueryPlan.operator_children)
   return _internal_operator_children(index);
 }
 inline void QueryPlan::set_operator_children(int index, ::PROTOBUF_NAMESPACE_ID::uint64 value) {
   operator_children_.Set(index, value);
-  // @@protoc_insertion_point(field_set:duckdb_wasm.proto.QueryPlan.operator_children)
+  // @@protoc_insertion_point(field_set:duckdb_webapi.proto.QueryPlan.operator_children)
 }
 inline void QueryPlan::_internal_add_operator_children(::PROTOBUF_NAMESPACE_ID::uint64 value) {
   operator_children_.Add(value);
 }
 inline void QueryPlan::add_operator_children(::PROTOBUF_NAMESPACE_ID::uint64 value) {
   _internal_add_operator_children(value);
-  // @@protoc_insertion_point(field_add:duckdb_wasm.proto.QueryPlan.operator_children)
+  // @@protoc_insertion_point(field_add:duckdb_webapi.proto.QueryPlan.operator_children)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
 QueryPlan::_internal_operator_children() const {
@@ -354,7 +354,7 @@ QueryPlan::_internal_operator_children() const {
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
 QueryPlan::operator_children() const {
-  // @@protoc_insertion_point(field_list:duckdb_wasm.proto.QueryPlan.operator_children)
+  // @@protoc_insertion_point(field_list:duckdb_webapi.proto.QueryPlan.operator_children)
   return _internal_operator_children();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
@@ -363,7 +363,7 @@ QueryPlan::_internal_mutable_operator_children() {
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
 QueryPlan::mutable_operator_children() {
-  // @@protoc_insertion_point(field_mutable_list:duckdb_wasm.proto.QueryPlan.operator_children)
+  // @@protoc_insertion_point(field_mutable_list:duckdb_webapi.proto.QueryPlan.operator_children)
   return _internal_mutable_operator_children();
 }
 
@@ -381,19 +381,19 @@ inline ::PROTOBUF_NAMESPACE_ID::uint64 QueryPlan::_internal_operator_child_offse
   return operator_child_offsets_.Get(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::uint64 QueryPlan::operator_child_offsets(int index) const {
-  // @@protoc_insertion_point(field_get:duckdb_wasm.proto.QueryPlan.operator_child_offsets)
+  // @@protoc_insertion_point(field_get:duckdb_webapi.proto.QueryPlan.operator_child_offsets)
   return _internal_operator_child_offsets(index);
 }
 inline void QueryPlan::set_operator_child_offsets(int index, ::PROTOBUF_NAMESPACE_ID::uint64 value) {
   operator_child_offsets_.Set(index, value);
-  // @@protoc_insertion_point(field_set:duckdb_wasm.proto.QueryPlan.operator_child_offsets)
+  // @@protoc_insertion_point(field_set:duckdb_webapi.proto.QueryPlan.operator_child_offsets)
 }
 inline void QueryPlan::_internal_add_operator_child_offsets(::PROTOBUF_NAMESPACE_ID::uint64 value) {
   operator_child_offsets_.Add(value);
 }
 inline void QueryPlan::add_operator_child_offsets(::PROTOBUF_NAMESPACE_ID::uint64 value) {
   _internal_add_operator_child_offsets(value);
-  // @@protoc_insertion_point(field_add:duckdb_wasm.proto.QueryPlan.operator_child_offsets)
+  // @@protoc_insertion_point(field_add:duckdb_webapi.proto.QueryPlan.operator_child_offsets)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
 QueryPlan::_internal_operator_child_offsets() const {
@@ -401,7 +401,7 @@ QueryPlan::_internal_operator_child_offsets() const {
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
 QueryPlan::operator_child_offsets() const {
-  // @@protoc_insertion_point(field_list:duckdb_wasm.proto.QueryPlan.operator_child_offsets)
+  // @@protoc_insertion_point(field_list:duckdb_webapi.proto.QueryPlan.operator_child_offsets)
   return _internal_operator_child_offsets();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
@@ -410,11 +410,11 @@ QueryPlan::_internal_mutable_operator_child_offsets() {
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
 QueryPlan::mutable_operator_child_offsets() {
-  // @@protoc_insertion_point(field_mutable_list:duckdb_wasm.proto.QueryPlan.operator_child_offsets)
+  // @@protoc_insertion_point(field_mutable_list:duckdb_webapi.proto.QueryPlan.operator_child_offsets)
   return _internal_mutable_operator_child_offsets();
 }
 
-// repeated .duckdb_wasm.proto.LogicalOperatorType operator_types = 3;
+// repeated .duckdb_webapi.proto.LogicalOperatorType operator_types = 3;
 inline int QueryPlan::_internal_operator_types_size() const {
   return operator_types_.size();
 }
@@ -424,27 +424,27 @@ inline int QueryPlan::operator_types_size() const {
 inline void QueryPlan::clear_operator_types() {
   operator_types_.Clear();
 }
-inline ::duckdb_wasm::proto::LogicalOperatorType QueryPlan::_internal_operator_types(int index) const {
-  return static_cast< ::duckdb_wasm::proto::LogicalOperatorType >(operator_types_.Get(index));
+inline ::duckdb_webapi::proto::LogicalOperatorType QueryPlan::_internal_operator_types(int index) const {
+  return static_cast< ::duckdb_webapi::proto::LogicalOperatorType >(operator_types_.Get(index));
 }
-inline ::duckdb_wasm::proto::LogicalOperatorType QueryPlan::operator_types(int index) const {
-  // @@protoc_insertion_point(field_get:duckdb_wasm.proto.QueryPlan.operator_types)
+inline ::duckdb_webapi::proto::LogicalOperatorType QueryPlan::operator_types(int index) const {
+  // @@protoc_insertion_point(field_get:duckdb_webapi.proto.QueryPlan.operator_types)
   return _internal_operator_types(index);
 }
-inline void QueryPlan::set_operator_types(int index, ::duckdb_wasm::proto::LogicalOperatorType value) {
+inline void QueryPlan::set_operator_types(int index, ::duckdb_webapi::proto::LogicalOperatorType value) {
   operator_types_.Set(index, value);
-  // @@protoc_insertion_point(field_set:duckdb_wasm.proto.QueryPlan.operator_types)
+  // @@protoc_insertion_point(field_set:duckdb_webapi.proto.QueryPlan.operator_types)
 }
-inline void QueryPlan::_internal_add_operator_types(::duckdb_wasm::proto::LogicalOperatorType value) {
+inline void QueryPlan::_internal_add_operator_types(::duckdb_webapi::proto::LogicalOperatorType value) {
   operator_types_.Add(value);
 }
-inline void QueryPlan::add_operator_types(::duckdb_wasm::proto::LogicalOperatorType value) {
-  // @@protoc_insertion_point(field_add:duckdb_wasm.proto.QueryPlan.operator_types)
+inline void QueryPlan::add_operator_types(::duckdb_webapi::proto::LogicalOperatorType value) {
+  // @@protoc_insertion_point(field_add:duckdb_webapi.proto.QueryPlan.operator_types)
   _internal_add_operator_types(value);
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField<int>&
 QueryPlan::operator_types() const {
-  // @@protoc_insertion_point(field_list:duckdb_wasm.proto.QueryPlan.operator_types)
+  // @@protoc_insertion_point(field_list:duckdb_webapi.proto.QueryPlan.operator_types)
   return operator_types_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField<int>*
@@ -453,7 +453,7 @@ QueryPlan::_internal_mutable_operator_types() {
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField<int>*
 QueryPlan::mutable_operator_types() {
-  // @@protoc_insertion_point(field_mutable_list:duckdb_wasm.proto.QueryPlan.operator_types)
+  // @@protoc_insertion_point(field_mutable_list:duckdb_webapi.proto.QueryPlan.operator_types)
   return _internal_mutable_operator_types();
 }
 
@@ -464,11 +464,11 @@ QueryPlan::mutable_operator_types() {
 // @@protoc_insertion_point(namespace_scope)
 
 }  // namespace proto
-}  // namespace duckdb_wasm
+}  // namespace duckdb_webapi
 
 PROTOBUF_NAMESPACE_OPEN
 
-template <> struct is_proto_enum< ::duckdb_wasm::proto::LogicalOperatorType> : ::std::true_type {};
+template <> struct is_proto_enum< ::duckdb_webapi::proto::LogicalOperatorType> : ::std::true_type {};
 
 PROTOBUF_NAMESPACE_CLOSE
 

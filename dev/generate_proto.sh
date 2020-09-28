@@ -10,7 +10,7 @@ PROTOC="${PROJECT_ROOT}/dev/protoc/install/bin/protoc"
 TSPROTOC_BUILD_DIR="${PROTO_BUILD_DIR}/ts-protoc-gen/"
 TSPROTOC_PLUGIN="${TSPROTOC_BUILD_DIR}/node_modules/.bin/protoc-gen-ts"
 
-CPP_PROTO_DIR="${PROTO_DIR}/lib/cpp/include/duckdb_wasm/proto"
+CPP_PROTO_DIR="${PROTO_DIR}/lib/cpp/include/duckdb_webapi/proto"
 JS_PROTO_DIR="${PROTO_DIR}/lib/js/src/proto"
 
 ${PROTOC} --version \
@@ -52,9 +52,3 @@ echo "[ RUN ] Install js library" \
     && npm install --silent \
     && { echo "[ OK  ] Install js library"; } \
     || { echo "[ ERR ] Install js library"; exit 1; }
-
-echo "[ RUN ] Formatting files" \
-    && ${PROJECT_ROOT}/bin/format \
-    && { echo "[ OK  ] Formatting files"; } \
-    || { echo "[ ERR ] Formatting files"; exit 1; }
-

@@ -6,7 +6,7 @@ endif (POLICY CMP0048)
 
 # ---------------------------------------------------------------------------
 
-project("duckdb_wasm" VERSION 0.1)
+project("duckdb" VERSION 0.1)
 cmake_minimum_required(VERSION 3.10)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -27,6 +27,7 @@ set(CMAKE_BUILD_PARALLEL_LEVEL ${NPROCS})
 
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
+find_package(Python3 COMPONENTS Interpreter REQUIRED)
 
 # ---------------------------------------------------------------------------
 # CMake includes
@@ -34,7 +35,6 @@ find_package(Threads REQUIRED)
 include("${CMAKE_SOURCE_DIR}/cmake/clang-tidy.cmake")
 include("${CMAKE_SOURCE_DIR}/cmake/duckdb.cmake")
 include("${CMAKE_SOURCE_DIR}/cmake/protobuf.cmake")
-include("${CMAKE_SOURCE_DIR}/cmake/googletest.cmake")
 include("${CMAKE_SOURCE_DIR}/cmake/spdlog.cmake")
 
 # ---------------------------------------------------------------------------
@@ -54,59 +54,39 @@ include_directories(
 )
 
 # ---------------------------------------------------------------------------
-# Library
+# API Proxy
 
-add_library(duckdb_wasm_core
+add_executable(duckdb_webapi
+    ${DUCKDB_SOURCE_FILE}
     ${CMAKE_SOURCE_DIR}/../submodules/duckdb/src/amalgamation/duckdb.cpp
     ${CMAKE_SOURCE_DIR}/src/api.cpp
-    ${DUCKDB_SOURCE_FILE}
+    ${CMAKE_SOURCE_DIR}/src/api_proxy.cpp
 )
 
-target_link_libraries(duckdb_wasm_core
-    duckdb_wasm_proto
+target_link_libraries(duckdb_webapi
+    duckdb_proto
     protobuf
     spdlog
     Threads::Threads
 )
 
-# ---------------------------------------------------------------------------
-# API Proxy
-
-add_executable(duckdb_wasm
-    ${CMAKE_SOURCE_DIR}/src/api_proxy.cpp
-)
-
-target_link_libraries(duckdb_wasm duckdb_wasm_core)
-
 if(EMSCRIPTEN)
     # SAFE_HEAP breaks duckdb 0.2
     # -s SAFE_HEAP=1
-    set_target_properties(duckdb_wasm PROPERTIES
+    set_target_properties(duckdb_webapi PROPERTIES
         LINK_FLAGS "\
             -s ENVIRONMENT='web,worker' \
             -s USE_PTHREADS=1 \
             -Wl,--shared-memory,--no-check-features \
             -s DISABLE_EXCEPTION_CATCHING=0 \
-            -s ASSERTIONS=1 \
             -s MODULARIZE=1 \
+            -s EXPORT_NAME='DuckDB' \
             -s EXPORTED_FUNCTIONS='[ \
                 _main, \
                 _malloc, \
-                _free
+                _free \
             ]' \
             -s EXTRA_EXPORTED_RUNTIME_METHODS='[\"ccall\",\"allocate\",\"ALLOC_STACK\", \"ALLOC_NORMAL\"]' \
         "
     )
 endif()
-
-# ---------------------------------------------------------------------------
-# Tester
-
-add_executable(tester
-    ${CMAKE_SOURCE_DIR}/test/tester.cc
-)
-target_link_libraries(tester duckdb_wasm_core gtest gmock Threads::Threads)
-
-enable_testing()
-add_test(duckdb_wasm tester)
-

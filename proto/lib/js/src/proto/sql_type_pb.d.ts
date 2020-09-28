@@ -1,4 +1,4 @@
-// package: duckdb_wasm.proto
+// package: duckdb_webapi.proto
 // file: sql_type.proto
 
 import * as jspb from "google-protobuf";

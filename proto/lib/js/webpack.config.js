@@ -5,7 +5,7 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'duckdb_wasm_proto.js',
+        filename: 'duckdb_webapi_proto.js',
         libraryTarget: 'commonjs',
     },
     performance: {

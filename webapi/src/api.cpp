@@ -1,4 +1,4 @@
-#include "duckdb_wasm/api.h"
+#include "duckdb_webapi/api.h"
 
 #include "duckdb.hpp"
 
@@ -11,7 +11,7 @@
 #include <string_view>
 #include <unordered_map>
 
-using namespace duckdb_wasm;
+using namespace duckdb_webapi;
 
 /// Reset the response
 void WebAPI::Response::clear() {

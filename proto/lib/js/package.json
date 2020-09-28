@@ -1,8 +1,8 @@
 {
-  "name": "duckdb_wasm_proto",
+  "name": "duckdb_webapi_proto",
   "version": "0.0.1",
-  "description": "duckdb_wasm protocol buffers",
-  "main": "dist/duckdb_wasm_proto.js",
+  "description": "duckdb_webapi protocol buffers",
+  "main": "dist/duckdb_webapi_proto.js",
   "typings": "src/index.d.ts",
   "scripts": {
     "bundle": "npx webpack"

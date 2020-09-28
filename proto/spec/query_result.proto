@@ -5,7 +5,7 @@ option cc_enable_arenas = true;
 
 import "sql_type.proto";
 
-package duckdb_wasm.proto;
+package duckdb_webapi.proto;
 
 message QueryResultColumn {
     repeated bool null_mask = 1;

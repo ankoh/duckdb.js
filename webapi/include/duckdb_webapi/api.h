@@ -1,5 +1,5 @@
-#ifndef INCLUDE_DUCKDB_WASM_API_H_
-#define INCLUDE_DUCKDB_WASM_API_H_
+#ifndef INCLUDE_DUCKDB_WEBAPI_API_H_
+#define INCLUDE_DUCKDB_WEBAPI_API_H_
 
 #include "duckdb.hpp"
 
@@ -8,13 +8,13 @@
 #include <unordered_map>
 #include "google/protobuf/arena.h"
 #include "google/protobuf/message_lite.h"
-#include "duckdb_wasm/common/span.h"
-#include "duckdb_wasm/proto/api.pb.h"
-#include "duckdb_wasm/proto/query_plan.pb.h"
-#include "duckdb_wasm/proto/query_result.pb.h"
-#include "duckdb_wasm/proto/sql_type.pb.h"
+#include "duckdb_webapi/common/span.h"
+#include "duckdb_webapi/proto/api.pb.h"
+#include "duckdb_webapi/proto/query_plan.pb.h"
+#include "duckdb_webapi/proto/query_result.pb.h"
+#include "duckdb_webapi/proto/sql_type.pb.h"
 
-namespace duckdb_wasm {
+namespace duckdb_webapi {
 
     /// The Web API context
     class WebAPI {
@@ -72,7 +72,7 @@ namespace duckdb_wasm {
             Session& session;
 
             /// The status code
-            duckdb_wasm::proto::StatusCode status_code;
+            duckdb_webapi::proto::StatusCode status_code;
             /// The error (if any)
             std::string error;
             /// The data (if any)
@@ -81,7 +81,7 @@ namespace duckdb_wasm {
             /// Request succeeded
             void requestSucceeded(nonstd::span<std::byte> data);
             /// Request failed
-            void requestFailed(duckdb_wasm::proto::StatusCode status, std::string error);
+            void requestFailed(duckdb_webapi::proto::StatusCode status, std::string error);
 
           public:
             /// Constructor
@@ -169,4 +169,4 @@ namespace duckdb_wasm {
 
 } // namespace tigon
 
-#endif // INCLUDE_DUCKDB_WASM_API_H_
+#endif // INCLUDE_DUCKDB_WEBAPI_API_H_

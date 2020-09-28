@@ -52,17 +52,17 @@ struct TableStruct_sql_5ftype_2eproto {
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
   static const ::PROTOBUF_NAMESPACE_ID::uint32 offsets[];
 };
-namespace duckdb_wasm {
+namespace duckdb_webapi {
 namespace proto {
 class SQLType;
 class SQLTypeDefaultTypeInternal;
 extern SQLTypeDefaultTypeInternal _SQLType_default_instance_;
 }  // namespace proto
-}  // namespace duckdb_wasm
+}  // namespace duckdb_webapi
 PROTOBUF_NAMESPACE_OPEN
-template<> ::duckdb_wasm::proto::SQLType* Arena::CreateMaybeMessage<::duckdb_wasm::proto::SQLType>(Arena*);
+template<> ::duckdb_webapi::proto::SQLType* Arena::CreateMaybeMessage<::duckdb_webapi::proto::SQLType>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
-namespace duckdb_wasm {
+namespace duckdb_webapi {
 namespace proto {
 
 enum SQLTypeID : int {
@@ -108,7 +108,7 @@ bool SQLTypeID_Parse(
 // ===================================================================
 
 class SQLType PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:duckdb_wasm.proto.SQLType) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:duckdb_webapi.proto.SQLType) */ {
  public:
   inline SQLType() : SQLType(nullptr) {}
   virtual ~SQLType();
@@ -188,7 +188,7 @@ class SQLType PROTOBUF_FINAL :
   void InternalSwap(SQLType* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "duckdb_wasm.proto.SQLType";
+    return "duckdb_webapi.proto.SQLType";
   }
   protected:
   explicit SQLType(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -225,13 +225,13 @@ class SQLType PROTOBUF_FINAL :
   std::string* _internal_mutable_collation();
   public:
 
-  // .duckdb_wasm.proto.SQLTypeID type_id = 1;
+  // .duckdb_webapi.proto.SQLTypeID type_id = 1;
   void clear_type_id();
-  ::duckdb_wasm::proto::SQLTypeID type_id() const;
-  void set_type_id(::duckdb_wasm::proto::SQLTypeID value);
+  ::duckdb_webapi::proto::SQLTypeID type_id() const;
+  void set_type_id(::duckdb_webapi::proto::SQLTypeID value);
   private:
-  ::duckdb_wasm::proto::SQLTypeID _internal_type_id() const;
-  void _internal_set_type_id(::duckdb_wasm::proto::SQLTypeID value);
+  ::duckdb_webapi::proto::SQLTypeID _internal_type_id() const;
+  void _internal_set_type_id(::duckdb_webapi::proto::SQLTypeID value);
   public:
 
   // uint32 width = 2;
@@ -252,7 +252,7 @@ class SQLType PROTOBUF_FINAL :
   void _internal_set_scale(::PROTOBUF_NAMESPACE_ID::uint32 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:duckdb_wasm.proto.SQLType)
+  // @@protoc_insertion_point(class_scope:duckdb_webapi.proto.SQLType)
  private:
   class _Internal;
 
@@ -277,24 +277,24 @@ class SQLType PROTOBUF_FINAL :
 #endif  // __GNUC__
 // SQLType
 
-// .duckdb_wasm.proto.SQLTypeID type_id = 1;
+// .duckdb_webapi.proto.SQLTypeID type_id = 1;
 inline void SQLType::clear_type_id() {
   type_id_ = 0;
 }
-inline ::duckdb_wasm::proto::SQLTypeID SQLType::_internal_type_id() const {
-  return static_cast< ::duckdb_wasm::proto::SQLTypeID >(type_id_);
+inline ::duckdb_webapi::proto::SQLTypeID SQLType::_internal_type_id() const {
+  return static_cast< ::duckdb_webapi::proto::SQLTypeID >(type_id_);
 }
-inline ::duckdb_wasm::proto::SQLTypeID SQLType::type_id() const {
-  // @@protoc_insertion_point(field_get:duckdb_wasm.proto.SQLType.type_id)
+inline ::duckdb_webapi::proto::SQLTypeID SQLType::type_id() const {
+  // @@protoc_insertion_point(field_get:duckdb_webapi.proto.SQLType.type_id)
   return _internal_type_id();
 }
-inline void SQLType::_internal_set_type_id(::duckdb_wasm::proto::SQLTypeID value) {
+inline void SQLType::_internal_set_type_id(::duckdb_webapi::proto::SQLTypeID value) {
   
   type_id_ = value;
 }
-inline void SQLType::set_type_id(::duckdb_wasm::proto::SQLTypeID value) {
+inline void SQLType::set_type_id(::duckdb_webapi::proto::SQLTypeID value) {
   _internal_set_type_id(value);
-  // @@protoc_insertion_point(field_set:duckdb_wasm.proto.SQLType.type_id)
+  // @@protoc_insertion_point(field_set:duckdb_webapi.proto.SQLType.type_id)
 }
 
 // uint32 width = 2;
@@ -305,7 +305,7 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 SQLType::_internal_width() const {
   return width_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::uint32 SQLType::width() const {
-  // @@protoc_insertion_point(field_get:duckdb_wasm.proto.SQLType.width)
+  // @@protoc_insertion_point(field_get:duckdb_webapi.proto.SQLType.width)
   return _internal_width();
 }
 inline void SQLType::_internal_set_width(::PROTOBUF_NAMESPACE_ID::uint32 value) {
@@ -314,7 +314,7 @@ inline void SQLType::_internal_set_width(::PROTOBUF_NAMESPACE_ID::uint32 value) 
 }
 inline void SQLType::set_width(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   _internal_set_width(value);
-  // @@protoc_insertion_point(field_set:duckdb_wasm.proto.SQLType.width)
+  // @@protoc_insertion_point(field_set:duckdb_webapi.proto.SQLType.width)
 }
 
 // uint32 scale = 3;
@@ -325,7 +325,7 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 SQLType::_internal_scale() const {
   return scale_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::uint32 SQLType::scale() const {
-  // @@protoc_insertion_point(field_get:duckdb_wasm.proto.SQLType.scale)
+  // @@protoc_insertion_point(field_get:duckdb_webapi.proto.SQLType.scale)
   return _internal_scale();
 }
 inline void SQLType::_internal_set_scale(::PROTOBUF_NAMESPACE_ID::uint32 value) {
@@ -334,7 +334,7 @@ inline void SQLType::_internal_set_scale(::PROTOBUF_NAMESPACE_ID::uint32 value) 
 }
 inline void SQLType::set_scale(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   _internal_set_scale(value);
-  // @@protoc_insertion_point(field_set:duckdb_wasm.proto.SQLType.scale)
+  // @@protoc_insertion_point(field_set:duckdb_webapi.proto.SQLType.scale)
 }
 
 // string collation = 4;
@@ -342,15 +342,15 @@ inline void SQLType::clear_collation() {
   collation_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& SQLType::collation() const {
-  // @@protoc_insertion_point(field_get:duckdb_wasm.proto.SQLType.collation)
+  // @@protoc_insertion_point(field_get:duckdb_webapi.proto.SQLType.collation)
   return _internal_collation();
 }
 inline void SQLType::set_collation(const std::string& value) {
   _internal_set_collation(value);
-  // @@protoc_insertion_point(field_set:duckdb_wasm.proto.SQLType.collation)
+  // @@protoc_insertion_point(field_set:duckdb_webapi.proto.SQLType.collation)
 }
 inline std::string* SQLType::mutable_collation() {
-  // @@protoc_insertion_point(field_mutable:duckdb_wasm.proto.SQLType.collation)
+  // @@protoc_insertion_point(field_mutable:duckdb_webapi.proto.SQLType.collation)
   return _internal_mutable_collation();
 }
 inline const std::string& SQLType::_internal_collation() const {
@@ -364,28 +364,28 @@ inline void SQLType::set_collation(std::string&& value) {
   
   collation_.SetLite(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:duckdb_wasm.proto.SQLType.collation)
+  // @@protoc_insertion_point(field_set_rvalue:duckdb_webapi.proto.SQLType.collation)
 }
 inline void SQLType::set_collation(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   collation_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:duckdb_wasm.proto.SQLType.collation)
+  // @@protoc_insertion_point(field_set_char:duckdb_webapi.proto.SQLType.collation)
 }
 inline void SQLType::set_collation(const char* value,
     size_t size) {
   
   collation_.SetLite(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:duckdb_wasm.proto.SQLType.collation)
+  // @@protoc_insertion_point(field_set_pointer:duckdb_webapi.proto.SQLType.collation)
 }
 inline std::string* SQLType::_internal_mutable_collation() {
   
   return collation_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* SQLType::release_collation() {
-  // @@protoc_insertion_point(field_release:duckdb_wasm.proto.SQLType.collation)
+  // @@protoc_insertion_point(field_release:duckdb_webapi.proto.SQLType.collation)
   return collation_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void SQLType::set_allocated_collation(std::string* collation) {
@@ -396,7 +396,7 @@ inline void SQLType::set_allocated_collation(std::string* collation) {
   }
   collation_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), collation,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:duckdb_wasm.proto.SQLType.collation)
+  // @@protoc_insertion_point(field_set_allocated:duckdb_webapi.proto.SQLType.collation)
 }
 
 #ifdef __GNUC__
@@ -406,11 +406,11 @@ inline void SQLType::set_allocated_collation(std::string* collation) {
 // @@protoc_insertion_point(namespace_scope)
 
 }  // namespace proto
-}  // namespace duckdb_wasm
+}  // namespace duckdb_webapi
 
 PROTOBUF_NAMESPACE_OPEN
 
-template <> struct is_proto_enum< ::duckdb_wasm::proto::SQLTypeID> : ::std::true_type {};
+template <> struct is_proto_enum< ::duckdb_webapi::proto::SQLTypeID> : ::std::true_type {};
 
 PROTOBUF_NAMESPACE_CLOSE
 

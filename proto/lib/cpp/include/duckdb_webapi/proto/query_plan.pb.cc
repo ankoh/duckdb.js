@@ -11,20 +11,20 @@
 #include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-namespace duckdb_wasm {
+namespace duckdb_webapi {
 namespace proto {
 class QueryPlanDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<QueryPlan> _instance;
 } _QueryPlan_default_instance_;
 }  // namespace proto
-}  // namespace duckdb_wasm
+}  // namespace duckdb_webapi
 static void InitDefaultsscc_info_QueryPlan_query_5fplan_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::duckdb_wasm::proto::_QueryPlan_default_instance_;
-    new (ptr) ::duckdb_wasm::proto::QueryPlan();
+    void* ptr = &::duckdb_webapi::proto::_QueryPlan_default_instance_;
+    new (ptr) ::duckdb_webapi::proto::QueryPlan();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
 }
@@ -32,7 +32,7 @@ static void InitDefaultsscc_info_QueryPlan_query_5fplan_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_QueryPlan_query_5fplan_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_QueryPlan_query_5fplan_2eproto}, {}};
 
-namespace duckdb_wasm {
+namespace duckdb_webapi {
 namespace proto {
 bool LogicalOperatorType_IsValid(int value) {
   switch (value) {
@@ -271,7 +271,7 @@ QueryPlan::QueryPlan(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   operator_types_(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:duckdb_wasm.proto.QueryPlan)
+  // @@protoc_insertion_point(arena_constructor:duckdb_webapi.proto.QueryPlan)
 }
 QueryPlan::QueryPlan(const QueryPlan& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite(),
@@ -279,14 +279,14 @@ QueryPlan::QueryPlan(const QueryPlan& from)
       operator_child_offsets_(from.operator_child_offsets_),
       operator_types_(from.operator_types_) {
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:duckdb_wasm.proto.QueryPlan)
+  // @@protoc_insertion_point(copy_constructor:duckdb_webapi.proto.QueryPlan)
 }
 
 void QueryPlan::SharedCtor() {
 }
 
 QueryPlan::~QueryPlan() {
-  // @@protoc_insertion_point(destructor:duckdb_wasm.proto.QueryPlan)
+  // @@protoc_insertion_point(destructor:duckdb_webapi.proto.QueryPlan)
   SharedDtor();
   _internal_metadata_.Delete<std::string>();
 }
@@ -311,7 +311,7 @@ const QueryPlan& QueryPlan::default_instance() {
 
 
 void QueryPlan::Clear() {
-// @@protoc_insertion_point(message_clear_start:duckdb_wasm.proto.QueryPlan)
+// @@protoc_insertion_point(message_clear_start:duckdb_webapi.proto.QueryPlan)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -350,7 +350,7 @@ const char* QueryPlan::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // repeated .duckdb_wasm.proto.LogicalOperatorType operator_types = 3;
+      // repeated .duckdb_webapi.proto.LogicalOperatorType operator_types = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedEnumParser(_internal_mutable_operator_types(), ptr, ctx);
@@ -358,7 +358,7 @@ const char* QueryPlan::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
         } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_add_operator_types(static_cast<::duckdb_wasm::proto::LogicalOperatorType>(val));
+          _internal_add_operator_types(static_cast<::duckdb_webapi::proto::LogicalOperatorType>(val));
         } else goto handle_unusual;
         continue;
       default: {
@@ -385,7 +385,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* QueryPlan::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:duckdb_wasm.proto.QueryPlan)
+  // @@protoc_insertion_point(serialize_to_array_start:duckdb_webapi.proto.QueryPlan)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -407,7 +407,7 @@ failure:
     }
   }
 
-  // repeated .duckdb_wasm.proto.LogicalOperatorType operator_types = 3;
+  // repeated .duckdb_webapi.proto.LogicalOperatorType operator_types = 3;
   {
     int byte_size = _operator_types_cached_byte_size_.load(std::memory_order_relaxed);
     if (byte_size > 0) {
@@ -420,12 +420,12 @@ failure:
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:duckdb_wasm.proto.QueryPlan)
+  // @@protoc_insertion_point(serialize_to_array_end:duckdb_webapi.proto.QueryPlan)
   return target;
 }
 
 size_t QueryPlan::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:duckdb_wasm.proto.QueryPlan)
+// @@protoc_insertion_point(message_byte_size_start:duckdb_webapi.proto.QueryPlan)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -462,7 +462,7 @@ size_t QueryPlan::ByteSizeLong() const {
     total_size += data_size;
   }
 
-  // repeated .duckdb_wasm.proto.LogicalOperatorType operator_types = 3;
+  // repeated .duckdb_webapi.proto.LogicalOperatorType operator_types = 3;
   {
     size_t data_size = 0;
     unsigned int count = static_cast<unsigned int>(this->_internal_operator_types_size());for (unsigned int i = 0; i < count; i++) {
@@ -495,7 +495,7 @@ void QueryPlan::CheckTypeAndMergeFrom(
 }
 
 void QueryPlan::MergeFrom(const QueryPlan& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:duckdb_wasm.proto.QueryPlan)
+// @@protoc_insertion_point(class_specific_merge_from_start:duckdb_webapi.proto.QueryPlan)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -507,7 +507,7 @@ void QueryPlan::MergeFrom(const QueryPlan& from) {
 }
 
 void QueryPlan::CopyFrom(const QueryPlan& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:duckdb_wasm.proto.QueryPlan)
+// @@protoc_insertion_point(class_specific_copy_from_start:duckdb_webapi.proto.QueryPlan)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -526,16 +526,16 @@ void QueryPlan::InternalSwap(QueryPlan* other) {
 }
 
 std::string QueryPlan::GetTypeName() const {
-  return "duckdb_wasm.proto.QueryPlan";
+  return "duckdb_webapi.proto.QueryPlan";
 }
 
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace proto
-}  // namespace duckdb_wasm
+}  // namespace duckdb_webapi
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::duckdb_wasm::proto::QueryPlan* Arena::CreateMaybeMessage< ::duckdb_wasm::proto::QueryPlan >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::duckdb_wasm::proto::QueryPlan >(arena);
+template<> PROTOBUF_NOINLINE ::duckdb_webapi::proto::QueryPlan* Arena::CreateMaybeMessage< ::duckdb_webapi::proto::QueryPlan >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::duckdb_webapi::proto::QueryPlan >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 
