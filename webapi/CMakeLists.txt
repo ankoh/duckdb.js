@@ -64,7 +64,7 @@ add_executable(duckdb_webapi
 )
 
 target_link_libraries(duckdb_webapi
-    duckdb_proto
+    duckdb_webapi_proto
     protobuf
     spdlog
     Threads::Threads

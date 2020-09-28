@@ -3,8 +3,8 @@ set -euo pipefail
 
 PROJECT_ROOT="$(cd $(dirname "$BASH_SOURCE[0]") && cd .. && pwd)" &> /dev/null
 
-CORE_SOURCE_DIR="${PROJECT_ROOT}/core"
-CORE_BUILD_DIR="${PROJECT_ROOT}/core/build/debug"
+WEBAPI_SOURCE_DIR="${PROJECT_ROOT}/webapi"
+WEBAPI_BUILD_DIR="${PROJECT_ROOT}/webapi/build/debug"
 
 [ -x "$(command -v cmake)" ] \
     && { echo "[ OK  ] Command: cmake"; } \
@@ -12,15 +12,15 @@ CORE_BUILD_DIR="${PROJECT_ROOT}/core/build/debug"
 
 set -x
 
-mkdir -p ${CORE_BUILD_DIR}
+mkdir -p ${WEBAPI_BUILD_DIR}
 
 cmake \
-    -S${CORE_SOURCE_DIR} \
-    -B${CORE_BUILD_DIR} \
+    -S${WEBAPI_SOURCE_DIR} \
+    -B${WEBAPI_BUILD_DIR} \
     -DCMAKE_BUILD_TYPE=Debug \
     -DCMAKE_EXPORT_COMPILE_COMMANDS=1 \
     && { echo "[ OK  ] Configure project"; } \
     || { echo "[ ERR ] Configure project"; exit 1; }
 
-ln -s ${CORE_BUILD_DIR}/compile_commands.json ${CORE_SOURCE_DIR}/compile_commands.json
+ln -s ${WEBAPI_BUILD_DIR}/compile_commands.json ${WEBAPI_SOURCE_DIR}/compile_commands.json
 

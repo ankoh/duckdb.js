@@ -1,5 +1,5 @@
 {
-  "name": "duckdb_wasm",
+  "name": "duckdb.js",
   "version": "0.0.1",
   "description": "DuckDB powered by WebAssembly",
   "author": "Andre Kohn <kohn.a@outlook.com>",

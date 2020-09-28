@@ -28,7 +28,7 @@ ${EMMAKE} make \
     -j${CORES} \
     duckdb_webapi
 
-mkdir -p "${PACKAGE_DIR}"
+mkdir -p "${LIB_DIR}"
 
 cp ${WEBAPI_SOURCE_DIR}/build/emscripten/duckdb_webapi.{wasm,js,worker.js} "${LIB_DIR}"
 
